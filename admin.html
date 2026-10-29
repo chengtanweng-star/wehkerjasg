@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Panel - Semakan Data</title>
+  <style>
+    body { font-family: sans-serif; background: #0f172a; color: #fff; padding: 30px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; background: #1e293b; border-radius: 8px; overflow: hidden; }
+    th, td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #334155; }
+    th { background: #334155; }
+    .btn-approve { background: #22c55e; color: #fff; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer; }
+    .btn-blacklist { background: #ef4444; color: #fff; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h2>Admin Dashboard - Senarai Pendaftaran</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Nama</th>
+        <th>No. IC</th>
+        <th>Status</th>
+        <th>Tindakan</th>
+      </tr>
+    </thead>
+    <tbody id="userTable">
+      <tr><td colspan="4" style="text-align: center;">Memuatkan data...</td></tr>
+    </tbody>
+  </table>
+
+  <script>
+    async function fetchUsers() {
+      try {
+        const res = await fetch('/api/admin/users');
+        const users = await res.json();
+        const tbody = document.getElementById('userTable');
+        tbody.innerHTML = '';
+
+        if (users.length === 0) {
+          tbody.innerHTML = `<tr><td colspan="4" style="text-align: center;">Tiada rekodjumpai.</td></tr>`;
+          return;
+        }
+
+        users.forEach(u => {
+          tbody.innerHTML += `
+            <tr>
+              <td>${u.name}</td>
+              <td>${u.ic_number}</td>
+              <td><strong>${u.status}</strong></td>
+              <td>
+                <button class="btn-approve" onclick="updateStatus(${u.id}, 'approved')">Approve</button>
+                <button class="btn-blacklist" onclick="updateStatus(${u.id}, 'blacklisted')">Blacklist</button>
+              </td>
+            </tr>
+          `;
+        });
+      } catch (err) {
+        console.error(err);
+      }
+    }
+
+    async function updateStatus(id, status) {
+      await fetch('/api/admin/update', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ id, status })
+      });
+      fetchUsers(); // Refresh jadual
+    }
+
+    fetchUsers();
+  </script>
+</body>
+</html>
