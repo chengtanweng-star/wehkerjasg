@@ -1,688 +1,219 @@
 <!DOCTYPE html>
-<html lang="ms">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Iklan peluang pekerjaan Singapura untuk rakyat Malaysia. Semak jawatan, gaji, syarat kerja dan maklumat majikan.">
-<title>Kerja Singapura | Peluang Kerjaya Malaysia</title>
-
-<style>
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-:root {
-    --navy: #09172b;
-    --blue: #12345a;
-    --gold: #ffc857;
-    --white: #ffffff;
-    --gray: #667085;
-    --light: #f3f6fa;
-    --green: #14805e;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background: var(--light);
-    color: #172437;
-    line-height: 1.6;
-}
-
-.container {
-    width: 92%;
-    max-width: 1150px;
-    margin: auto;
-}
-
-header {
-    background: var(--navy);
-    color: white;
-    padding: 18px 0;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-}
-
-.logo {
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.logo span {
-    color: var(--gold);
-}
-
-.logo small {
-    display: block;
-    font-size: 10px;
-    letter-spacing: 2px;
-    color: #cbd5e1;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 18px;
-    font-size: 14px;
-}
-
-nav a:hover {
-    color: var(--gold);
-}
-
-.hero {
-    background: linear-gradient(130deg, #09172b, #174b77);
-    color: white;
-    padding: 85px 0;
-}
-
-.hero-content {
-    max-width: 780px;
-}
-
-.badge {
-    display: inline-block;
-    background: rgba(255, 200, 87, .15);
-    color: var(--gold);
-    padding: 7px 13px;
-    border-radius: 30px;
-    font-size: 12px;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.hero h1 {
-    font-size: clamp(35px, 6vw, 58px);
-    line-height: 1.12;
-    margin-bottom: 20px;
-}
-
-.hero h1 span {
-    color: var(--gold);
-}
-
-.hero p {
-    color: #d6e1ef;
-    font-size: 17px;
-    margin-bottom: 28px;
-}
-
-.btn {
-    display: inline-block;
-    padding: 13px 21px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
-}
-
-.btn-gold {
-    background: var(--gold);
-    color: var(--navy);
-}
-
-.btn-blue {
-    background: #1769aa;
-    color: white;
-}
-
-.btn:hover {
-    opacity: .88;
-}
-
-.notice {
-    background: #fff3cd;
-    color: #765500;
-    padding: 14px 0;
-    font-size: 13px;
-}
-
-section {
-    padding: 65px 0;
-}
-
-.section-title {
-    font-size: 32px;
-    color: var(--navy);
-    margin-bottom: 10px;
-}
-
-.section-desc {
-    color: var(--gray);
-    margin-bottom: 30px;
-}
-
-.job-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
-}
-
-.job-card {
-    background: white;
-    border: 1px solid #e1e7ef;
-    border-radius: 15px;
-    padding: 24px;
-    box-shadow: 0 8px 25px rgba(9, 23, 43, .05);
-}
-
-.job-icon {
-    font-size: 32px;
-    margin-bottom: 12px;
-}
-
-.job-card h3 {
-    color: var(--navy);
-    font-size: 21px;
-    margin-bottom: 5px;
-}
-
-.company {
-    color: var(--gray);
-    font-size: 13px;
-    margin-bottom: 17px;
-}
-
-.tag {
-    display: inline-block;
-    background: #e5f6ee;
-    color: var(--green);
-    padding: 5px 10px;
-    border-radius: 30px;
-    font-size: 11px;
-    font-weight: bold;
-    margin-bottom: 14px;
-}
-
-.job-info {
-    border-top: 1px solid #e6ebf2;
-    border-bottom: 1px solid #e6ebf2;
-    padding: 13px 0;
-    margin-bottom: 15px;
-    font-size: 14px;
-}
-
-.job-info div {
-    margin: 7px 0;
-}
-
-.job-card p {
-    color: #526174;
-    font-size: 14px;
-    margin-bottom: 18px;
-}
-
-.job-card .btn {
-    width: 100%;
-    text-align: center;
-}
-
-.disclaimer {
-    background: #fff7e8;
-    border-left: 4px solid #f0b429;
-    padding: 12px;
-    font-size: 12px;
-    color: #77551a;
-    margin-bottom: 16px;
-}
-
-.steps-section {
-    background: white;
-}
-
-.steps {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-}
-
-.step {
-    background: #f7f9fc;
-    padding: 23px;
-    border-radius: 12px;
-}
-
-.step-number {
-    background: var(--navy);
-    color: var(--gold);
-    display: inline-grid;
-    place-items: center;
-    width: 35px;
-    height: 35px;
-    border-radius: 8px;
-    font-weight: bold;
-    margin-bottom: 12px;
-}
-
-.step h3 {
-    margin-bottom: 8px;
-    font-size: 17px;
-}
-
-.step p {
-    font-size: 13px;
-    color: var(--gray);
-}
-
-.safety {
-    background: #edf3f9;
-}
-
-.safety-box {
-    background: white;
-    padding: 25px;
-    border-radius: 14px;
-    border: 1px solid #e0e7ef;
-}
-
-.safety-box h3 {
-    margin-bottom: 12px;
-    color: var(--navy);
-}
-
-.safety-box ul {
-    padding-left: 20px;
-}
-
-.safety-box li {
-    margin-bottom: 9px;
-}
-
-.contact {
-    background: var(--navy);
-    color: white;
-    text-align: center;
-}
-
-.contact h2 {
-    font-size: 32px;
-    margin-bottom: 12px;
-}
-
-.contact p {
-    color: #cbd5e1;
-    margin-bottom: 25px;
-}
-
-footer {
-    background: #050d19;
-    color: #aab8c9;
-    padding: 25px 0;
-    text-align: center;
-    font-size: 12px;
-}
-
-@media(max-width: 850px) {
-    .job-grid {
-        grid-template-columns: repeat(2, 1fr);
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="KasuhaNET.STORE — Malaysia digital shop platform for website development, multi-service digital tools, Linux terminal support and business solutions.">
+  <meta name="theme-color" content="#08090d">
+  <title>KasuhaNET.STORE | Malaysia Digital Shop Platform & Multi-Service Digital Tools</title>
+  <style>
+    :root {
+      --bg: #08090d;
+      --panel: #12141c;
+      --panel-2: #191b25;
+      --text: #f6f7fb;
+      --muted: #b9bdca;
+      --red: #ff304f;
+      --red-dark: #a90025;
+      --orange: #ff7a35;
+      --line: rgba(255,255,255,.12);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: radial-gradient(circle at 80% 0%, rgba(255,48,79,.14), transparent 30%), var(--bg);
+      color: var(--text);
+      font-family: Inter, Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1120px, calc(100% - 36px)); margin: 0 auto; }
+    .topbar {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(8,9,13,.88); backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .brand { display: flex; align-items: center; gap: 11px; font-weight: 900; letter-spacing: .5px; }
+    .brand-mark {
+      width: 42px; height: 42px; display: grid; place-items: center; border-radius: 12px;
+      background: linear-gradient(135deg, var(--red), #ff814a); color: white; font-weight: 1000;
+      box-shadow: 0 0 28px rgba(255,48,79,.28);
+    }
+    .brand small { display: block; color: var(--muted); font-size: 10px; font-weight: 700; letter-spacing: 2px; }
+    .nav-links { display: flex; align-items: center; gap: 24px; color: #d8dbe4; font-size: 14px; }
+    .nav-links a:hover { color: #ff667d; }
+    .btn {
+      display: inline-flex; justify-content: center; align-items: center; gap: 8px;
+      padding: 12px 18px; border-radius: 10px; border: 1px solid transparent;
+      font-weight: 800; font-size: 14px; cursor: pointer; transition: .2s ease;
+    }
+    .btn-primary { background: linear-gradient(120deg, var(--red-dark), var(--red), var(--orange)); color: white; box-shadow: 0 8px 28px rgba(255,48,79,.2); }
+    .btn-primary:hover { transform: translateY(-2px); filter: brightness(1.1); }
+    .btn-outline { border-color: rgba(255,255,255,.2); color: white; background: rgba(255,255,255,.03); }
+    .btn-outline:hover { border-color: var(--red); }
+    .hero { padding: 78px 0 58px; overflow: hidden; }
+    .hero-grid { display: grid; grid-template-columns: 1.02fr .98fr; gap: 44px; align-items: center; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 8px; color: #ff8b9c; font-size: 12px; font-weight: 900; letter-spacing: 2px; text-transform: uppercase; }
+    .eyebrow::before { content: ""; width: 25px; height: 2px; background: linear-gradient(90deg,var(--red),var(--orange)); }
+    h1 { font-size: clamp(36px, 5vw, 61px); line-height: 1.08; letter-spacing: -2px; margin: 18px 0; }
+    .gradient-text { background: linear-gradient(100deg,#fff 0%,#ff7187 48%,#ff9b52 100%); color: transparent; background-clip: text; -webkit-background-clip: text; }
+    .hero p { color: var(--muted); font-size: 17px; max-width: 610px; }
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 26px; }
+    .hero-points { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 28px; color: #e4e5eb; font-size: 13px; }
+    .hero-points span::before { content: "✓"; color: #ff657c; font-weight: 900; margin-right: 7px; }
+    .visual-card {
+      position: relative; border: 1px solid rgba(255,255,255,.13); border-radius: 24px; padding: 14px;
+      background: linear-gradient(145deg,rgba(255,48,79,.12),rgba(255,255,255,.025) 45%,rgba(255,122,53,.08));
+      box-shadow: 0 30px 90px rgba(0,0,0,.35);
+    }
+    .video-frame { background: #05060a; border-radius: 16px; overflow: hidden; position: relative; }
+    .video-frame video { width: 100%; aspect-ratio: 16/10; display: block; object-fit: cover; background: #10121a; }
+    .video-caption { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 5px 4px; }
+    .video-caption strong { display: block; font-size: 14px; }
+    .video-caption span { display: block; color: var(--muted); font-size: 12px; }
+    .live-dot { width: 9px; height: 9px; border-radius: 50%; background: #ff425e; box-shadow: 0 0 14px #ff425e; flex: 0 0 auto; }
+    .section { padding: 68px 0; }
+    .section-head { text-align: center; max-width: 720px; margin: 0 auto 36px; }
+    .section-head h2 { font-size: clamp(28px,4vw,42px); line-height: 1.15; margin: 12px 0; }
+    .section-head p { color: var(--muted); margin: 0; }
+    .service-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
+    .service-card { background: linear-gradient(145deg,var(--panel-2),var(--panel)); border: 1px solid var(--line); border-radius: 17px; padding: 24px; }
+    .service-icon { width: 46px; height: 46px; display: grid; place-items: center; border-radius: 13px; background: linear-gradient(135deg,rgba(255,48,79,.22),rgba(255,122,53,.13)); border: 1px solid rgba(255,90,110,.25); font-size: 22px; }
+    .service-card h3 { margin: 16px 0 8px; font-size: 18px; }
+    .service-card p { color: var(--muted); font-size: 14px; margin: 0; }
+    .pricing { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 22px; align-items: stretch; }
+    .price-card { position: relative; display: flex; flex-direction: column; background: linear-gradient(160deg,#151720,#0e0f15); border: 1px solid rgba(255,255,255,.13); border-radius: 22px; padding: 30px; overflow: hidden; }
+    .price-card.premium { border-color: rgba(255,65,91,.65); box-shadow: 0 18px 55px rgba(255,48,79,.11); }
+    .price-card.premium::before { content: ""; position: absolute; height: 3px; top: 0; left: 0; right: 0; background: linear-gradient(90deg,var(--red),var(--orange),#ffb15b); }
+    .plan-tag { align-self: flex-start; background: rgba(255,255,255,.07); color: #e7e8ef; border: 1px solid var(--line); padding: 5px 10px; border-radius: 999px; font-size: 11px; font-weight: 900; letter-spacing: 1px; }
+    .premium .plan-tag { background: rgba(255,48,79,.15); color: #ff9aaa; border-color: rgba(255,48,79,.3); }
+    .price-card h3 { font-size: 28px; margin: 14px 0 4px; }
+    .price-sub { color: var(--muted); font-size: 14px; margin: 0 0 18px; }
+    .price { font-size: 38px; font-weight: 950; letter-spacing: -1px; margin: 4px 0 2px; }
+    .price small { font-size: 13px; font-weight: 600; letter-spacing: 0; color: var(--muted); }
+    .price-note { color: #9fa4b4; font-size: 12px; margin-bottom: 20px; }
+    .feature-list { list-style: none; margin: 0 0 28px; padding: 0; flex: 1; }
+    .feature-list li { padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,.07); color: #e4e6ed; font-size: 14px; }
+    .feature-list li::before { content: "✓"; color: #ff657c; font-weight: 900; margin-right: 10px; }
+    .price-card .btn { width: 100%; }
+    .upgrade-note { margin-top: 22px; padding: 16px 18px; border: 1px dashed rgba(255,112,132,.35); border-radius: 14px; color: var(--muted); font-size: 13px; background: rgba(255,48,79,.045); }
+    .upgrade-note strong { color: #fff; }
+    .process-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 14px; counter-reset: step; }
+    .process-card { border: 1px solid var(--line); border-radius: 15px; padding: 20px; background: rgba(255,255,255,.025); counter-increment: step; }
+    .process-card::before { content: "0" counter(step); color: #ff7187; font-size: 12px; font-weight: 900; letter-spacing: 2px; }
+    .process-card h3 { font-size: 16px; margin: 10px 0 5px; }
+    .process-card p { font-size: 13px; color: var(--muted); margin: 0; }
+    .cta-box { padding: 36px; border: 1px solid rgba(255,70,96,.28); border-radius: 22px; background: radial-gradient(circle at 90% 0%,rgba(255,122,53,.18),transparent 36%),linear-gradient(135deg,rgba(255,48,79,.11),rgba(255,255,255,.025)); display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .cta-box h2 { margin: 0 0 8px; font-size: clamp(25px,3vw,36px); }
+    .cta-box p { margin: 0; color: var(--muted); }
+    footer { border-top: 1px solid var(--line); margin-top: 30px; padding: 28px 0; color: #aeb2c0; font-size: 12px; }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+    .whatsapp-float {
+      position: fixed; right: 20px; bottom: 20px; z-index: 30; width: 60px; height: 60px; border-radius: 50%;
+      display: grid; place-items: center; color: #fff; background: linear-gradient(135deg,#25d366,#0b9d58);
+      box-shadow: 0 10px 30px rgba(37,211,102,.35); border: 2px solid rgba(255,255,255,.85); transition: transform .2s;
+    }
+    .whatsapp-float:hover { transform: translateY(-4px) scale(1.04); }
+    .whatsapp-float svg { width: 30px; height: 30px; fill: currentColor; }
+    @media (max-width: 850px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .hero { padding-top: 50px; }
+      .service-grid { grid-template-columns: 1fr 1fr; }
+      .process-grid { grid-template-columns: 1fr 1fr; }
+      .nav-links { gap: 13px; }
+      .nav-links a:not(.btn) { display: none; }
+    }
+    @media (max-width: 580px) {
+      .container { width: min(100% - 28px,1120px); }
+      .nav { min-height: 66px; }
+      .brand { font-size: 14px; }
+      .brand-mark { width: 37px; height: 37px; }
+      .nav-links .btn { padding: 10px 12px; font-size: 12px; }
+      .hero { padding: 42px 0 30px; }
+      h1 { letter-spacing: -1.3px; }
+      .hero p { font-size: 15px; }
+      .section { padding: 48px 0; }
+      .service-grid, .pricing, .process-grid { grid-template-columns: 1fr; }
+      .price-card { padding: 24px; }
+      .cta-box { padding: 25px; align-items: flex-start; flex-direction: column; }
+      .whatsapp-float { width: 56px; height: 56px; right: 15px; bottom: 15px; }
     }
 
-    .steps {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    nav a {
-        margin-left: 8px;
-    }
-}
-
-@media(max-width: 600px) {
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    nav {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 12px;
-    }
-
-    nav a {
-        margin: 0;
-        font-size: 12px;
-    }
-
-    .hero {
-        padding: 55px 0;
-    }
-
-    .job-grid,
-    .steps {
-        grid-template-columns: 1fr;
-    }
-
-    .section-title {
-        font-size: 27px;
-    }
-}
-</style>
+    .notice-box,.profile-box,.warning-box,.partner-box,.reading-box { border:1px solid var(--line); border-radius:18px; padding:24px; background:linear-gradient(145deg,rgba(255,48,79,.08),rgba(255,255,255,.025)); margin-top:20px; }
+    .notice-date { color:#ff9aaa; font-weight:900; letter-spacing:1px; }
+    .tag-list { display:flex; flex-wrap:wrap; gap:10px; padding:0; list-style:none; }
+    .tag-list li { border:1px solid rgba(255,90,110,.25); border-radius:999px; padding:8px 12px; background:rgba(255,48,79,.08); font-size:13px; }
+    .subnav { display:flex; gap:10px; flex-wrap:wrap; margin-top:18px; }
+    .link-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+    .link-card { border:1px solid var(--line); background:rgba(255,255,255,.025); padding:18px; border-radius:14px; }
+    .link-card a { color:#ff899a; font-weight:800; }
+    .warning-box { border-color:rgba(255,48,79,.5); }
+    .partner-banner { width:100%; max-width:320px; height:auto; border-radius:12px; margin:12px 0; }
+    .small-muted { color:var(--muted); font-size:13px; }
+    @media(max-width:850px){.link-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:580px){.link-grid{grid-template-columns:1fr}}
+  </style>
 </head>
-
 <body>
-
-<header>
-    <div class="container navbar">
-        <div class="logo">
-            KERJA<span>SG</span>
-            <small>PELUANG KERJAYA MALAYSIA</small>
-        </div>
-
-        <nav>
-            <a href="#utama">Utama</a>
-            <a href="#jawatan">Jawatan Kosong</a>
-            <a href="#proses">Cara Memohon</a>
-            <a href="#keselamatan">Keselamatan</a>
-        </nav>
-    </div>
+<header class="topbar">
+  <div class="container nav">
+    <a class="brand" href="#home" aria-label="KasuhaNET home page"><span class="brand-mark">K<span style="color:#171820">N</span></span><span>KasuhaNET.STORE<small>DIGITAL STORE PLATFORM</small></span></a>
+    <nav class="nav-links" aria-label="Navigasi utama">
+      <a href="#home">HOME</a><a href="#about">ABOUT US</a><a href="https://kasuhanet.store/terms.html">TERMS & POLICY</a><a href="https://kasuhanet.store/support-centreEN.html">SUPPORT</a>
+      <a class="btn btn-outline" href="indexEnglishVersion.html" lang="en">EN</a><a class="btn btn-outline" href="indexMalayVersi.html" lang="ms">MS</a>
+      <a class="btn btn-primary" href="#pakej">View Packages ↗</a>
+    </nav>
+  </div>
 </header>
-
 <main>
+<section class="hero" id="home"><div class="container hero-grid"><div>
+  <span class="eyebrow">Hybrid Sales • Multi-Service • Digital Tools</span>
+  <h1><span class="gradient-text">KasuhaNET.STORE</span><br>Digital Shop Platform</h1>
+  <p>A hybrid sales and multi-service digital platform connecting website development, digital services, affiliate support and digital tools in one place.</p>
+  <div class="hero-actions"><a class="btn btn-primary" href="#pakej">Website Development →</a><a class="btn btn-outline" href="https://kasuhanet.store/Custom-Web-Workshop-EN">Terminal Choice / Custom Web</a></div>
+  <div class="hero-points"><span>Website & digital systems</span><span>Flexible services</span><span>Standard & Premium options</span></div>
+  <div class="subnav"><a class="btn btn-outline" href="https://kasuhanet.store/CommandCanDoLIST.html">Terminal Options</a><a class="btn btn-outline" href="https://kasuhanet.store/ShopAffliateSupport.html">Affiliate Support</a></div>
+</div><div class="visual-card"><div class="video-frame"><video autoplay muted loop playsinline controls preload="metadata"><source src="https://files.catbox.moe/6zu98v.mp4" type="video/mp4">Your browser does not support HTML5 video.</video></div><div class="video-caption"><div><strong>KasuhaNET Website Showcase</strong><span>Visual preview of websites and digital services</span></div><span class="live-dot" aria-label="Video demo"></span></div></div></div></section>
 
-<section class="hero" id="utama">
-    <div class="container hero-content">
+<section class="section" id="organisation" style="padding-top:10px"><div class="container"><div class="section-head"><span class="eyebrow">Organisation & Collaboration</span><h2>Powered by Collaboration of <span class="gradient-text">Organisations & Companies</span></h2><p><strong>Kasuha Oculus Organisation</strong> • <strong>Kasuhanet Resources</strong></p><p class="small-muted">KasuhaNET.STORE is presented as a digital platform under Kasuhanet Resources and the Kasuha Oculus Organisation framework.</p></div><div class="link-grid"><div class="link-card"><h3>🌍 Rwanda (Africa)</h3><a href="https://kasuhanet.store/Rwanda-SupportDevelopement.html">Rwanda Support & Development ↗</a></div><div class="link-card"><h3>🌏 Timor Leste (Asia)</h3><a href="https://kasuhanet.store/Timor-Leste-SupportDevelopement.html">Timor Leste Support & Development ↗</a></div><div class="link-card"><h3>Terminal Codex</h3><p>Technical references and terminal support.</p><a href="https://kasuhanet.store/CommandCanDoLIST.html">Open Codex ↗</a></div></div></div></section>
+<section class="section" id="announcement"><div class="container"><div class="section-head"><span class="eyebrow">Platform Announcement</span><h2>Announcement — Planned Addition of <span class="gradient-text">Service+</span></h2><p>An announcement for KasuhaNET.STORE customers and visitors.</p></div>
+<div class="notice-box"><div class="notice-date">9 SEPTEMBER 2026</div><p><strong>For the Information of Kasuhanet Customers & Visitors:</strong> KasuhaNET plans to introduce Service+, expanding the range of services and business opportunities offered through KasuhaNET.STORE. Service availability will depend on the relevant field and customer requirements.</p><ul class="feature-list"><li><strong>TAKAFUL & INSURANCE</strong></li><li><strong>PROPERTY CONSULTANCY / REAL ESTATE</strong></li><li><strong>EMPLOYMENT AGENCY SERVICES</strong></li><li><strong>DIY CUSTOM ELECTRONIC DESIGN</strong></li><li><strong>PRIVATE DELIVERY RIDER</strong></li></ul><p><strong>Service+ Direction:</strong> Service+ is part of KasuhaNET’s plan to develop a broader service ecosystem. New services and updates will be announced from time to time through KasuhaNET.STORE. Thank you for your support and trust.</p></div></div></section>
 
-        <div class="badge">
-            🇸🇬 PELUANG PEKERJAAN SINGAPURA
-        </div>
+<section class="section" id="servis"><div class="container"><div class="section-head"><span class="eyebrow">Web Development & Digital Infrastructure</span><h2>Professional Web Development <span class="gradient-text">by KasuhaNET</span></h2><p>Do you want a digital presence that looks professional, performs to a high standard, and is built to current industry specifications? <strong>KasuhaNET Resources</strong> provides web development solutions from essential landing pages to multi-page systems, supported by server management and terminal configuration.</p></div>
+<div class="service-grid"><article class="service-card"><div class="service-icon">⌘</div><h3>Maximum Performance & Speed</h3><p>Code efficiency, image compression and resource management help pages load quickly.</p></article><article class="service-card"><div class="service-icon">▣</div><h3>Mobile-Friendly Design</h3><p>Responsive layouts for smartphones, tablets, laptops and desktops.</p></article><article class="service-card"><div class="service-icon">🔒</div><h3>Data Security & Licensing</h3><p>Clean web structure, HTTPS/SSL and appropriate file-permission settings.</p></article><article class="service-card"><div class="service-icon">⌘</div><h3>Terminal & Linux Server</h3><p>Help managing Linux environments, including Linux on Penguin/ChromeOS, library dependencies and system scripts.</p></article><article class="service-card"><div class="service-icon">⚙</div><h3>Custom Web Workshop</h3><p>Choose modular components and tools based on your project needs and budget.</p><a href="https://kasuhanet.store/Custom-Web-Workshop-EN" class="btn btn-outline" style="margin-top:16px">⬅️ Learn More</a></article><article class="service-card"><div class="service-icon">↗</div><h3>Terminal Options & Affiliate</h3><p>Explore terminal options, affiliate support and other digital services available on the platform.</p><div class="subnav"><a href="https://kasuhanet.store/CommandCanDoLIST.html">Terminal Options</a><a href="https://kasuhanet.store/ShopAffliateSupport.html">Affiliate Support</a></div></article></div></div></section>
 
-        <h1>
-            Cari Kerja di Singapura.
-            <span>Bina Masa Depan Anda.</span>
-        </h1>
+<section class="section" id="about"><div class="container"><div class="section-head"><span class="eyebrow">Founder & Developer</span><h2>Hi, I'm <span class="gradient-text">Kasuha Zukarnain</span></h2><p>CallSign: Kasuha Zukarnain • 8–9 Years Developer Experience</p></div><div class="profile-box"><ul class="feature-list"><li><strong>Development & Founding:</strong> Lead developer behind the Kasuhanet.Store platform, founder of Kasuhanet Resources for business operations, and creator of Kasuha Oculus Organisation.</li><li><strong>Code Precision:</strong> Interested in clean code structures and programming logic for building smooth digital functions.</li><li><strong>OS & Android Enthusiast:</strong> Focuses on Android internals and operating systems (OS), including configurations that improve performance and software design.</li><li><strong>Strategy & Monetization:</strong> Develops systems and data analysis aimed at sustainable financial growth through a business ecosystem.</li></ul><p><strong>System & Architecture | Kasuha Oculus Framework</strong></p></div></div></section>
 
-        <p>
-            Platform iklan peluang pekerjaan untuk rakyat Malaysia
-            yang ingin meneroka peluang kerjaya di Singapura.
-            Semak jawatan, gaji, lokasi dan syarat pekerjaan
-            sebelum menghantar permohonan.
-        </p>
+<section class="section" id="referral"><div class="container"><div class="section-head"><span class="eyebrow">New Program Referral</span><h2>Register for a <span class="gradient-text">Hong Leong Bank Account</span></h2><p>Use your referral code and check the bank's current sign-up terms and available rewards.</p><a class="btn btn-primary" href="https://www.hlb.com.my/en/personal-banking/deposits/apply-at-hlb-connect.html" target="_blank" rel="noopener">Sign Up Now ↗</a></div></div></section>
 
-        <a href="#jawatan" class="btn btn-gold">
-            LIHAT JAWATAN KOSONG →
-        </a>
+<section class="section" id="pakej"><div class="container"><div class="section-head"><span class="eyebrow">Service Package Details</span><h2>Website Development <span class="gradient-text">Packages</span></h2><p>Choose a package based on your content structure, functionality and business needs.</p></div>
+<div class="notice-box"><h3>🟢 Package 1: Landing Page (Single Page)</h3><p>Ideal for a single-product campaign, simple order form, Facebook/TikTok/Google Ads promotion or business profile introduction.</p><p><strong>Page Structure:</strong> One complete page with smooth scrolling navigation.</p><ul class="feature-list"><li>Hero section with a headline, subtitle and call-to-action button.</li><li>Product/service showcase with features, benefits and specifications.</li><li>Optimised visual gallery.</li><li>Direct WhatsApp button without requiring customers to save the number.</li><li>Google Maps dan maklumat hubungan.</li><li>Basic meta tags for Google search and essential system files.</li></ul></div>
+<div class="pricing" style="margin-top:22px"><article class="price-card"><span class="plan-tag">LANDING PAGE</span><h3>Landing Page Package</h3><div class="price">RM 299 <small>++</small></div><p class="price-sub">For marketing campaigns, simple product launches and mini-shop portfolios.</p><ul class="feature-list"><li>1 halaman utama (single-page design)</li><li>Responsive code structure for mobile devices</li><li>Google AdSense optimisation</li><li>Call-to-action WhatsApp / borang</li><li>Custom domain not included</li></ul><a class="btn btn-primary" href="https://toyyibpay.com/L-P-P-LPP299" target="_blank" rel="noopener">Subscribe Now ↗</a></article>
+<article class="price-card premium"><span class="plan-tag">POPULAR</span><h3>Premium Standard</h3><div class="price">RM 900 <small>++</small></div><p class="price-sub">A complete management system for clubs, associations and dynamic business profiles.</p><ul class="feature-list"><li>Deploy a multi-page website</li><li>Custom Content Management System</li><li>Google AdSense dan advanced SEO</li><li>Showcase produk / galeri aktiviti kelab</li><li>Custom domain support (.com/.my)</li><li>Premium Cyberpunk UI/UX style</li></ul><a class="btn btn-primary" href="https://toyyibpay.com/P-MS-Pay-PREMIUM-STANDARD" target="_blank" rel="noopener">Upgrade to Premium ↗</a></article></div>
+<div class="notice-box"><h3>🟣 Package 2: Premium Website (Multi-Page System)</h3><p>Untuk syarikat korporat, agensi, penyedia servis teknikal, kedai dalam talian dan organisasi yang memerlukan struktur maklumat terperinci.</p><p><strong>Page Structure:</strong> Pembangunan sehingga 5–10 halaman utama seperti Home, About Us, Services, Blog/Documentation Center dan Contact Us.</p><ul class="feature-list"><li>Exclusive design aligned with your brand and business visual identity.</li><li>Blog/Codex section for articles, technical guides and terminal commands.</li><li>Enquiry and booking forms that send notifications to email or a database.</li><li>Social media links and payment gateway integration when required.</li><li>SEO, pengurusan kata kunci, struktur heading H1/H2/H3, XML sitemap dan Google Search Console.</li></ul></div>
+<div class="upgrade-note"><strong>Nota:</strong> Harga dan skop akhir tertakluk kepada persetujuan, keperluan teknikal, domain/hosting serta integrasi pihak ketiga.</div></div></section>
 
-    </div>
-</section>
+<section class="section" id="solutions"><div class="container"><div class="section-head"><span class="eyebrow">Solutions For You</span><h2>Teroka <span class="gradient-text">Servis & Program</span></h2></div><div class="link-grid"><div class="link-card"><h3>Terminal Choice</h3><p>Rujukan arahan dan pilihan terminal.</p><a href="https://kasuhanet.store/CommandCanDoLIST.html">Open Terminal Options ↗</a></div><div class="link-card"><h3>Affiliate Support</h3><p>Sokongan affiliate dan peluang promosi.</p><a href="https://kasuhanet.store/ShopAffliateSupport.html">Open Affiliate Support ↗</a></div><div class="link-card"><h3>E-Learning Plans</h3><p>Web learning plans after purchasing a website package starting from RM299–RM345; review programme details before registering.</p><a href="https://kasuhanet.store/Website-Service.html">Explore Web Services ↗</a></div><div class="link-card"><h3>Emergency Financial Services+</h3><p>Maklumat perkhidmatan PayLater Cashout.</p><a href="https://kasuhanet.store/CashOutServicePayLater.html">PayLater Cashout ↗</a></div><div class="link-card"><h3>Ryt Bank Referral</h3><p>Program referral pihak ketiga.</p><a href="https://referrals.rytbank.my/MCoA/gq8xkdot" target="_blank" rel="noopener">Ryt Register Invite ↗</a></div><div class="link-card"><h3>VPS Malaysia</h3><p>Affiliate partner link for VPS services.</p><a href="https://vpsmalaysia.com.my/system/aff.php?aff=2530" target="_blank" rel="noopener">Banner Ads VPSMalaysia ↗</a></div></div></div></section>
 
-<div class="notice">
-    <div class="container">
-        <strong>Makluman:</strong>
-        Semua jawatan, nama majikan, gaji dan status pengambilan
-        perlu disahkan sebelum iklan diterbitkan.
-        Pengambilan pekerja Malaysia tertakluk pada syarat permit kerja.
-    </div>
-</div>
+<section class="section" id="bjak"><div class="container"><div class="partner-box"><span class="eyebrow">Official Partner / Referral</span><h2>Renew Insurance & Roadtax with <span class="gradient-text">BJAK</span></h2><p>Get quotes from 15+ car and motorcycle insurance companies online. Check terms, prices and eligibility directly with the provider.</p><ul class="tag-list"><li>✓ 100% Online</li><li>✓ Instant Discount (subject to offers)</li><li>✓ Roadtax Delivery (subject to conditions)</li></ul><p><strong>Referral reward: RM25 reward / cashback</strong> — subject to current programme terms.</p><a class="btn btn-primary" href="https://bjak.my/ref/mohamadslbr" target="_blank" rel="noopener">Get Free Quote ❯</a></div></div></section>
 
-<section id="jawatan">
-    <div class="container">
+<section class="section" id="scam"><div class="container"><div class="warning-box"><h2>⚠️ Beware of Scammer Fraud!</h2><p><strong>Please take note:</strong> We take fraud seriously. Unauthorised parties may misuse the business name or owner identity of KasuhaNET.STORE for financial scams.</p><p><strong>Important Notice:</strong> Official transactions must be verified through registered bank accounts under <strong>Kasuhanet Resources</strong> dan <strong>Kasuha Oculus Organisation</strong> sahaja. Verify payment details through official channels before making any transaction.</p><p class="small-muted">KasuhaNET is not responsible for financial losses arising from dealings with unauthorised third parties, subject to applicable law.</p></div></div></section>
 
-        <h2 class="section-title">Jawatan Kosong Singapura</h2>
+<section class="section" id="reading"><div class="container"><div class="section-head"><span class="eyebrow">Reading Center</span><h2>Terminal Codex & <span class="gradient-text">Technical Support</span></h2><p>A collection of dependency installation commands and web data management guidance for Linux, Penguin and terminal environments.</p></div><div class="service-grid"><article class="service-card"><div class="service-icon">⌘</div><h3>Dependency Setup</h3><p>Terminal commands for installing software packages in Linux and Penguin environments with simple steps.</p></article><article class="service-card"><div class="service-icon">▤</div><h3>Web Data Management</h3><p>Help with log management, database optimisation and automated backups.</p></article><article class="service-card"><div class="service-icon">⚙</div><h3>VPS / Linux Support</h3><p>Support for custom web environments or software management on VPS/Linux, based on the agreed scope and access.</p></article></div><div class="notice-box"><h3>End-to-End Workflow</h3><ol><li><strong>Pembelian pakej:</strong> Choose the Landing Page or Premium option and complete payment using the provided link.</li><li><strong>Sesi briefing:</strong> Contact us through the agreed communication channel. Details such as your logo, text, product images and social links will be required.</li><li><strong>Pembangunan & reka bentuk:</strong> Code structure, visual design and integrations are built according to the package.</li><li><strong>Semakan & ujian:</strong> A preview link is provided for review; mobile display and page performance are tested.</li><li><strong>Pelancaran & serahan:</strong> The website is published on the agreed domain. Administrator access and documentation are handed over if included in the scope.</li></ol><h3>Terms & Conditions of Service</h3><ul class="feature-list"><li><strong>Domain & Hosting:</strong> Costs depend on whether existing domain/hosting is used or new services are purchased.</li><li><strong>Content:</strong> Text and images are provided by the customer; help with rewriting content can be discussed.</li><li><strong>After-Sales Support:</strong> Basic technical support is free for 30 days after project handover, subject to the agreed scope.</li></ul></div></div></section>
 
-        <p class="section-desc">
-            Peluang pekerjaan untuk calon Malaysia.
-            Hubungi pengiklan untuk mendapatkan maklumat lengkap
-            dan mengesahkan kekosongan.
-        </p>
-
-        <div class="job-grid">
-
-            <article class="job-card">
-                <div class="job-icon">🏭</div>
-
-                <span class="tag">CONTOH IKLAN</span>
-
-                <h3>Operator Pengeluaran</h3>
-
-                <div class="company">
-                    Benefit Shouza Ltd.
-                </div>
-
-                <div class="job-info">
-                    <div>📍 <strong>Woodlands,Checkpoint 12</strong></div>
-                    <div>💰 Gaji: <strong>SGD 1,800 - 2,500</strong></div>
-                    <div>🕒 Waktu: <strong>[Syif Siang / Malam</strong></div>
-                    <div>👥 Kekosongan: <strong>5 - 10</strong></div>
-                </div>
-
-                <p>
-                    Menjaga mesin pengeluaran bahan plastik Cetakan,
-                    kelayakan Min Diploma,Mengikut Pengalaman 1 Tahun kiraan Gaji dan Tidak berpengalaman gaji asas mengikut normal prosedeur Buruh pekerjaan kerajaan Singapura 
-                </p>
-
-                <div class="disclaimer">
-                    Maklumat jawatan ini ialah ruang contoh.
-                    Sahkan kekosongan sebelum diterbitkan.
-                </div>
-
-                <button class="btn btn-blue apply"
-                    data-job="Operator Pengeluaran">
-                    TANYA JAWATAN
-                </button>
-            </article>
-
-            <article class="job-card">
-                <div class="job-icon">📦</div>
-
-                <span class="tag">CONTOH IKLAN</span>
-
-                <h3>Pekerja Gudang</h3>
-
-                <div class="company">
-                    [Nama Syarikat Berdaftar]
-                </div>
-
-                <div class="job-info">
-                    <div>📍 <strong>[Lokasi Singapura]</strong></div>
-                    <div>💰 Gaji: <strong>SGD [jumlah]</strong></div>
-                    <div>🕒 Waktu: <strong>[Syif / waktu kerja]</strong></div>
-                    <div>👥 Kekosongan: <strong>[Jumlah sebenar]</strong></div>
-                </div>
-
-                <p>
-                    Terangkan tugas gudang, keperluan fizikal,
-                    waktu kerja, cuti dan kemudahan yang disediakan.
-                </p>
-
-                <div class="disclaimer">
-                    Pengambilan pekerja Malaysia perlu disahkan
-                    dengan pihak majikan.
-                </div>
-
-                <button class="btn btn-blue apply"
-                    data-job="Pekerja Gudang">
-                    TANYA JAWATAN
-                </button>
-            </article>
-
-            <article class="job-card">
-                <div class="job-icon">🧹</div>
-
-                <span class="tag">CONTOH IKLAN</span>
-
-                <h3>Pembersihan / Housekeeping</h3>
-
-                <div class="company">
-                    [Nama Syarikat Berdaftar]
-                </div>
-
-                <div class="job-info">
-                    <div>📍 <strong>[Lokasi Singapura]</strong></div>
-                    <div>💰 Gaji: <strong>SGD [jumlah]</strong></div>
-                    <div>🕒 Waktu: <strong>[Syif / waktu kerja]</strong></div>
-                    <div>👥 Kekosongan: <strong>[Jumlah sebenar]</strong></div>
-                </div>
-
-                <p>
-                    Masukkan skop kerja, hari bekerja,
-                    cuti, elaun dan syarat kelayakan calon.
-                </p>
-
-                <div class="disclaimer">
-                    Lengkapkan maklumat majikan dan jawatan
-                    sebelum menerima permohonan.
-                </div>
-
-                <button class="btn btn-blue apply"
-                    data-job="Pembersihan / Housekeeping">
-                    TANYA JAWATAN
-                </button>
-            </article>
-
-        </div>
-    </div>
-</section>
-
-<section class="steps-section" id="proses">
-    <div class="container">
-
-        <h2 class="section-title">Cara Memohon</h2>
-
-        <p class="section-desc">
-            Proses ringkas untuk membantu anda membuat permohonan
-            dengan lebih teratur.
-        </p>
-
-        <div class="steps">
-
-            <div class="step">
-                <div class="step-number">01</div>
-                <h3>Pilih Jawatan</h3>
-                <p>Semak tugas, gaji, lokasi dan syarat kelayakan.</p>
-            </div>
-
-            <div class="step">
-                <div class="step-number">02</div>
-                <h3>Semak Majikan</h3>
-                <p>Sahkan identiti syarikat dan pihak yang mengiklankan kerja.</p>
-            </div>
-
-            <div class="step">
-                <div class="step-number">03</div>
-                <h3>Hantar Permohonan</h3>
-                <p>Sediakan CV dan dokumen yang diminta melalui saluran rasmi.</p>
-            </div>
-
-            <div class="step">
-                <div class="step-number">04</div>
-                <h3>Tunggu Pengesahan</h3>
-                <p>Semak tawaran bertulis dan proses permit kerja yang berkaitan.</p>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<section class="safety" id="keselamatan">
-    <div class="container">
-
-        <h2 class="section-title">Pastikan Peluang Kerja Sah</h2>
-
-        <p class="section-desc">
-            Lindungi diri anda sebelum menerima tawaran kerja di luar negara.
-        </p>
-
-        <div class="safety-box">
-            <h3>Senarai semak keselamatan</h3>
-
-            <ul>
-                <li>Sahkan nama syarikat dan alamat tempat kerja.</li>
-                <li>Minta surat tawaran yang menyatakan gaji dan syarat kerja.</li>
-                <li>Semak status agensi pekerjaan jika menggunakan khidmat agensi.</li>
-                <li>Jangan percaya dakwaan permit kerja dijamin 100%.</li>
-                <li>Jangan membuat bayaran ke akaun peribadi tanpa pengesahan dan asas yang sah.</li>
-                <li>Jangan serahkan pasport atau maklumat bank kepada pihak yang tidak dipercayai.</li>
-                <li>Semak syarat permit kerja melalui saluran rasmi pihak berkuasa Singapura.</li>
-            </ul>
-        </div>
-
-    </div>
-</section>
-
-<section class="contact" id="hubungi">
-    <div class="container">
-
-        <h2>Berminat Memohon Kerja?</h2>
-
-        <p>
-            Hubungi pengiklan untuk mendapatkan butiran jawatan,
-            nama majikan, gaji dan proses permohonan.
-        </p>
-
-        <p>
-            <strong>Pengiklan:</strong> [Nama Perniagaan / Agensi]<br>
-            <strong>E-mel:</strong> [E-mel Rasmi]<br>
-            <strong>WhatsApp:</strong> [Nombor WhatsApp]
-        </p>
-
-        <a href="#" id="whatsappBtn" class="btn btn-gold">
-            HUBUNGI MELALUI WHATSAPP
-        </a>
-
-    </div>
-</section>
-
+<section class="section" id="hubungi"><div class="container"><div class="cta-box"><div><h2>Build Your Digital Presence.</h2><p>Contact KasuhaNET to discuss websites, digital services, technical setup or system upgrades.</p><p class="small-muted">E-mel: support@kasuhanet.store</p></div><a class="btn btn-primary" id="main-whatsapp" href="https://wa.me/60123456789" target="_blank" rel="noopener">Contact / Request a Quote ↗</a></div></div></section>
 </main>
-
-<footer>
-    <div class="container">
-        <p>
-            © <span id="year"></span> KERJASG |
-            Iklan Peluang Pekerjaan Singapura untuk Malaysia
-        </p>
-        <p>
-            Maklumat iklan perlu disahkan. Tiada jaminan pekerjaan
-            atau kelulusan permit kerja diberikan melalui halaman ini.
-        </p>
-    </div>
-</footer>
-
+<footer><div class="container footer-inner"><div><strong>KasuhaNET.STORE | Digital Store Platform</strong><br><span>Services: CommandCanDo • MyAffiliate • PayLater BNPL</span><br><span>Resources: About Us • Support • Terms & Policy</span></div><div><span>Follow Us: </span><a href="https://www.facebook.com/share/1BfeDZJqjP/" target="_blank" rel="noopener">Facebook</a> · <a href="https://tiktok.com/@kasuhanet.store" target="_blank" rel="noopener">TikTok</a> · <a href="https://t.me/kasuhanetstorebot" target="_blank" rel="noopener">Telegram</a><br><span>© <span id="year"></span> <strong>KasuhaNET Resources (202503248308). All Rights Reserved.</strong></span></div></div></footer>
+<a class="whatsapp-float" id="floating-whatsapp" href="https://wa.me/60123456789" target="_blank" rel="noopener" aria-label="Contact KasuhaNET on WhatsApp"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.02 3C8.86 3 3.04 8.8 3.04 15.94c0 2.28.6 4.5 1.75 6.46L3 29l6.78-1.77a13.05 13.05 0 0 0 6.23 1.58h.01c7.15 0 12.97-5.8 12.97-12.94A12.9 12.9 0 0 0 16.02 3zm0 23.62h-.01a10.8 10.8 0 0 1-5.5-1.5l-.4-.24-4.02 1.05 1.07-3.91-.26-.4a10.7 10.7 0 0 1-1.65-5.68c0-5.93 4.83-10.75 10.78-10.75 2.88 0 5.59 1.12 7.62 3.15a10.67 10.67 0 0 1 3.15 7.6c0 5.93-4.83 10.75-10.78 10.75zm5.91-8.05c-.32-.16-1.9-.94-2.2-1.05-.3-.11-.51-.16-.73.16-.21.32-.83 1.05-1.02 1.27-.19.21-.38.24-.7.08-.32-.16-1.35-.5-2.57-1.6-.95-.84-1.6-1.88-1.79-2.2-.19-.32-.02-.49.14-.65.14-.14.32-.38.48-.57.16-.19.32-.21.54-.03.16-.08-.73-1.75-1-2.4-.26-.63-.53-.54-.73-.55h-.62c-.21 0-.56.4-.86.4-.3.32-1.13 1.1-1.13 2.68s1.16 3.1 1.32 3.31c.21.32 2.28 3.48 5.53 4.88.77.33 1.37.53 1.84.68.77.24 1.47.21 2.02.13.62-.09 1.9-.78 2.17-1.53.27-.75.19-1.4.19-1.53-.08-.14-.29-.22-.61-.38z"/></svg></a>
 <script>
-/*
-  PENTING:
-  Gantikan nombor contoh di bawah dengan nombor WhatsApp sebenar.
-  Format: kod negara diikuti nombor, tanpa tanda +, ruang atau sengkang.
-*/
-const WHATSAPP_NUMBER = "60123456789";
-
-function whatsappLink(message) {
-    return "https://wa.me/" + WHATSAPP_NUMBER +
-        "?text=" + encodeURIComponent(message);
-}
-
-document.getElementById("whatsappBtn").href = whatsappLink(
-    "Salam, saya berminat dengan iklan peluang pekerjaan di Singapura. Mohon maklumat majikan, jawatan, gaji, syarat kelayakan dan proses permohonan."
-);
-
-document.querySelectorAll(".apply").forEach(function(button) {
-    button.addEventListener("click", function() {
-        const job = this.dataset.job;
-
-        window.open(
-            whatsappLink(
-                "Salam, saya berminat dengan jawatan " + job +
-                " di Singapura. Mohon maklumat majikan, gaji, lokasi, syarat dan status pengambilan pekerja Malaysia."
-            ),
-            "_blank",
-            "noopener"
-        );
-    });
-});
-
+const WHATSAPP_NUMBER = "60123456789"; // Replace with the official number in international format, without + or spaces.
+const DEFAULT_MESSAGE = "Hello, I am interested in KasuhaNET.STORE services.";
+const waURL = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(DEFAULT_MESSAGE);
+document.getElementById("floating-whatsapp").href = waURL;
+document.getElementById("main-whatsapp").href = waURL;
 document.getElementById("year").textContent = new Date().getFullYear();
 </script>
-
 </body>
 </html>
-'''
-path = Path("/mnt/data/index.html")
-path.write_text(html, encoding="utf-8")
-print(f"Fail HTML siap: {path}")
-print(f"Saiz fail: {path.stat().st_size} bytes")
