@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Iklan peluang pekerjaan Singapura untuk rakyat Malaysia. Semak jawatan, gaji, syarat kerja dan maklumat majikan.">
+<title>Kerja Singapura | Peluang Kerjaya Malaysia</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --navy: #09172b;
+    --blue: #12345a;
+    --gold: #ffc857;
+    --white: #ffffff;
+    --gray: #667085;
+    --light: #f3f6fa;
+    --green: #14805e;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--light);
+    color: #172437;
+    line-height: 1.6;
+}
+
+.container {
+    width: 92%;
+    max-width: 1150px;
+    margin: auto;
+}
+
+header {
+    background: var(--navy);
+    color: white;
+    padding: 18px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: var(--gold);
+}
+
+.logo small {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #cbd5e1;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 18px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: var(--gold);
+}
+
+.hero {
+    background: linear-gradient(130deg, #09172b, #174b77);
+    color: white;
+    padding: 85px 0;
+}
+
+.hero-content {
+    max-width: 780px;
+}
+
+.badge {
+    display: inline-block;
+    background: rgba(255, 200, 87, .15);
+    color: var(--gold);
+    padding: 7px 13px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(35px, 6vw, 58px);
+    line-height: 1.12;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: var(--gold);
+}
+
+.hero p {
+    color: #d6e1ef;
+    font-size: 17px;
+    margin-bottom: 28px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 21px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-gold {
+    background: var(--gold);
+    color: var(--navy);
+}
+
+.btn-blue {
+    background: #1769aa;
+    color: white;
+}
+
+.btn:hover {
+    opacity: .88;
+}
+
+.notice {
+    background: #fff3cd;
+    color: #765500;
+    padding: 14px 0;
+    font-size: 13px;
+}
+
+section {
+    padding: 65px 0;
+}
+
+.section-title {
+    font-size: 32px;
+    color: var(--navy);
+    margin-bottom: 10px;
+}
+
+.section-desc {
+    color: var(--gray);
+    margin-bottom: 30px;
+}
+
+.job-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.job-card {
+    background: white;
+    border: 1px solid #e1e7ef;
+    border-radius: 15px;
+    padding: 24px;
+    box-shadow: 0 8px 25px rgba(9, 23, 43, .05);
+}
+
+.job-icon {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.job-card h3 {
+    color: var(--navy);
+    font-size: 21px;
+    margin-bottom: 5px;
+}
+
+.company {
+    color: var(--gray);
+    font-size: 13px;
+    margin-bottom: 17px;
+}
+
+.tag {
+    display: inline-block;
+    background: #e5f6ee;
+    color: var(--green);
+    padding: 5px 10px;
+    border-radius: 30px;
+    font-size: 11px;
+    font-weight: bold;
+    margin-bottom: 14px;
+}
+
+.job-info {
+    border-top: 1px solid #e6ebf2;
+    border-bottom: 1px solid #e6ebf2;
+    padding: 13px 0;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.job-info div {
+    margin: 7px 0;
+}
+
+.job-card p {
+    color: #526174;
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+.job-card .btn {
+    width: 100%;
+    text-align: center;
+}
+
+.disclaimer {
+    background: #fff7e8;
+    border-left: 4px solid #f0b429;
+    padding: 12px;
+    font-size: 12px;
+    color: #77551a;
+    margin-bottom: 16px;
+}
+
+.steps-section {
+    background: white;
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.step {
+    background: #f7f9fc;
+    padding: 23px;
+    border-radius: 12px;
+}
+
+.step-number {
+    background: var(--navy);
+    color: var(--gold);
+    display: inline-grid;
+    place-items: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.step h3 {
+    margin-bottom: 8px;
+    font-size: 17px;
+}
+
+.step p {
+    font-size: 13px;
+    color: var(--gray);
+}
+
+.safety {
+    background: #edf3f9;
+}
+
+.safety-box {
+    background: white;
+    padding: 25px;
+    border-radius: 14px;
+    border: 1px solid #e0e7ef;
+}
+
+.safety-box h3 {
+    margin-bottom: 12px;
+    color: var(--navy);
+}
+
+.safety-box ul {
+    padding-left: 20px;
+}
+
+.safety-box li {
+    margin-bottom: 9px;
+}
+
+.contact {
+    background: var(--navy);
+    color: white;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.contact p {
+    color: #cbd5e1;
+    margin-bottom: 25px;
+}
+
+footer {
+    background: #050d19;
+    color: #aab8c9;
+    padding: 25px 0;
+    text-align: center;
+    font-size: 12px;
+}
+
+@media(max-width: 850px) {
+    .job-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    nav a {
+        margin-left: 8px;
+    }
+}
+
+@media(max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    nav a {
+        margin: 0;
+        font-size: 12px;
+    }
+
+    .hero {
+        padding: 55px 0;
+    }
+
+    .job-grid,
+    .steps {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 27px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="container navbar">
+        <div class="logo">
+            KERJA<span>SG</span>
+            <small>PELUANG KERJAYA MALAYSIA</small>
+        </div>
+
+        <nav>
+            <a href="#utama">Utama</a>
+            <a href="#jawatan">Jawatan Kosong</a>
+            <a href="#proses">Cara Memohon</a>
+            <a href="#keselamatan">Keselamatan</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+<section class="hero" id="utama">
+    <div class="container hero-content">
+
+        <div class="badge">
+            🇸🇬 PELUANG PEKERJAAN SINGAPURA
+        </div>
+
+        <h1>
+            Cari Kerja di Singapura.
+            <span>Bina Masa Depan Anda.</span>
+        </h1>
+
+        <p>
+            Platform iklan peluang pekerjaan untuk rakyat Malaysia
+            yang ingin meneroka peluang kerjaya di Singapura.
+            Semak jawatan, gaji, lokasi dan syarat pekerjaan
+            sebelum menghantar permohonan.
+        </p>
+
+        <a href="#jawatan" class="btn btn-gold">
+            LIHAT JAWATAN KOSONG →
+        </a>
+
+    </div>
+</section>
+
+<div class="notice">
+    <div class="container">
+        <strong>Makluman:</strong>
+        Semua jawatan, nama majikan, gaji dan status pengambilan
+        perlu disahkan sebelum iklan diterbitkan.
+        Pengambilan pekerja Malaysia tertakluk pada syarat permit kerja.
+    </div>
+</div>
+
+<section id="jawatan">
+    <div class="container">
+
+        <h2 class="section-title">Jawatan Kosong Singapura</h2>
+
+        <p class="section-desc">
+            Peluang pekerjaan untuk calon Malaysia.
+            Hubungi pengiklan untuk mendapatkan maklumat lengkap
+            dan mengesahkan kekosongan.
+        </p>
+
+        <div class="job-grid">
+
+            <article class="job-card">
+                <div class="job-icon">🏭</div>
+
+                <span class="tag">CONTOH IKLAN</span>
+
+                <h3>Operator Pengeluaran</h3>
+
+                <div class="company">
+                    Benefit Shouza Ltd.
+                </div>
+
+                <div class="job-info">
+                    <div>📍 <strong>Woodlands,Checkpoint 12</strong></div>
+                    <div>💰 Gaji: <strong>SGD 1,800 - 2,500</strong></div>
+                    <div>🕒 Waktu: <strong>[Syif Siang / Malam</strong></div>
+                    <div>👥 Kekosongan: <strong>5 - 10</strong></div>
+                </div>
+
+                <p>
+                    Menjaga mesin pengeluaran bahan plastik Cetakan,
+                    kelayakan Min Diploma,Mengikut Pengalaman 1 Tahun kiraan Gaji dan Tidak berpengalaman gaji asas mengikut normal prosedeur Buruh pekerjaan kerajaan Singapura 
+                </p>
+
+                <div class="disclaimer">
+                    Maklumat jawatan ini ialah ruang contoh.
+                    Sahkan kekosongan sebelum diterbitkan.
+                </div>
+
+                <button class="btn btn-blue apply"
+                    data-job="Operator Pengeluaran">
+                    TANYA JAWATAN
+                </button>
+            </article>
+
+            <article class="job-card">
+                <div class="job-icon">📦</div>
+
+                <span class="tag">CONTOH IKLAN</span>
+
+                <h3>Pekerja Gudang</h3>
+
+                <div class="company">
+                    [Nama Syarikat Berdaftar]
+                </div>
+
+                <div class="job-info">
+                    <div>📍 <strong>[Lokasi Singapura]</strong></div>
+                    <div>💰 Gaji: <strong>SGD [jumlah]</strong></div>
+                    <div>🕒 Waktu: <strong>[Syif / waktu kerja]</strong></div>
+                    <div>👥 Kekosongan: <strong>[Jumlah sebenar]</strong></div>
+                </div>
+
+                <p>
+                    Terangkan tugas gudang, keperluan fizikal,
+                    waktu kerja, cuti dan kemudahan yang disediakan.
+                </p>
+
+                <div class="disclaimer">
+                    Pengambilan pekerja Malaysia perlu disahkan
+                    dengan pihak majikan.
+                </div>
+
+                <button class="btn btn-blue apply"
+                    data-job="Pekerja Gudang">
+                    TANYA JAWATAN
+                </button>
+            </article>
+
+            <article class="job-card">
+                <div class="job-icon">🧹</div>
+
+                <span class="tag">CONTOH IKLAN</span>
+
+                <h3>Pembersihan / Housekeeping</h3>
+
+                <div class="company">
+                    [Nama Syarikat Berdaftar]
+                </div>
+
+                <div class="job-info">
+                    <div>📍 <strong>[Lokasi Singapura]</strong></div>
+                    <div>💰 Gaji: <strong>SGD [jumlah]</strong></div>
+                    <div>🕒 Waktu: <strong>[Syif / waktu kerja]</strong></div>
+                    <div>👥 Kekosongan: <strong>[Jumlah sebenar]</strong></div>
+                </div>
+
+                <p>
+                    Masukkan skop kerja, hari bekerja,
+                    cuti, elaun dan syarat kelayakan calon.
+                </p>
+
+                <div class="disclaimer">
+                    Lengkapkan maklumat majikan dan jawatan
+                    sebelum menerima permohonan.
+                </div>
+
+                <button class="btn btn-blue apply"
+                    data-job="Pembersihan / Housekeeping">
+                    TANYA JAWATAN
+                </button>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<section class="steps-section" id="proses">
+    <div class="container">
+
+        <h2 class="section-title">Cara Memohon</h2>
+
+        <p class="section-desc">
+            Proses ringkas untuk membantu anda membuat permohonan
+            dengan lebih teratur.
+        </p>
+
+        <div class="steps">
+
+            <div class="step">
+                <div class="step-number">01</div>
+                <h3>Pilih Jawatan</h3>
+                <p>Semak tugas, gaji, lokasi dan syarat kelayakan.</p>
+            </div>
+
+            <div class="step">
+                <div class="step-number">02</div>
+                <h3>Semak Majikan</h3>
+                <p>Sahkan identiti syarikat dan pihak yang mengiklankan kerja.</p>
+            </div>
+
+            <div class="step">
+                <div class="step-number">03</div>
+                <h3>Hantar Permohonan</h3>
+                <p>Sediakan CV dan dokumen yang diminta melalui saluran rasmi.</p>
+            </div>
+
+            <div class="step">
+                <div class="step-number">04</div>
+                <h3>Tunggu Pengesahan</h3>
+                <p>Semak tawaran bertulis dan proses permit kerja yang berkaitan.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="safety" id="keselamatan">
+    <div class="container">
+
+        <h2 class="section-title">Pastikan Peluang Kerja Sah</h2>
+
+        <p class="section-desc">
+            Lindungi diri anda sebelum menerima tawaran kerja di luar negara.
+        </p>
+
+        <div class="safety-box">
+            <h3>Senarai semak keselamatan</h3>
+
+            <ul>
+                <li>Sahkan nama syarikat dan alamat tempat kerja.</li>
+                <li>Minta surat tawaran yang menyatakan gaji dan syarat kerja.</li>
+                <li>Semak status agensi pekerjaan jika menggunakan khidmat agensi.</li>
+                <li>Jangan percaya dakwaan permit kerja dijamin 100%.</li>
+                <li>Jangan membuat bayaran ke akaun peribadi tanpa pengesahan dan asas yang sah.</li>
+                <li>Jangan serahkan pasport atau maklumat bank kepada pihak yang tidak dipercayai.</li>
+                <li>Semak syarat permit kerja melalui saluran rasmi pihak berkuasa Singapura.</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<section class="contact" id="hubungi">
+    <div class="container">
+
+        <h2>Berminat Memohon Kerja?</h2>
+
+        <p>
+            Hubungi pengiklan untuk mendapatkan butiran jawatan,
+            nama majikan, gaji dan proses permohonan.
+        </p>
+
+        <p>
+            <strong>Pengiklan:</strong> [Nama Perniagaan / Agensi]<br>
+            <strong>E-mel:</strong> [E-mel Rasmi]<br>
+            <strong>WhatsApp:</strong> [Nombor WhatsApp]
+        </p>
+
+        <a href="#" id="whatsappBtn" class="btn btn-gold">
+            HUBUNGI MELALUI WHATSAPP
+        </a>
+
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <div class="container">
+        <p>
+            © <span id="year"></span> KERJASG |
+            Iklan Peluang Pekerjaan Singapura untuk Malaysia
+        </p>
+        <p>
+            Maklumat iklan perlu disahkan. Tiada jaminan pekerjaan
+            atau kelulusan permit kerja diberikan melalui halaman ini.
+        </p>
+    </div>
+</footer>
+
+<script>
+/*
+  PENTING:
+  Gantikan nombor contoh di bawah dengan nombor WhatsApp sebenar.
+  Format: kod negara diikuti nombor, tanpa tanda +, ruang atau sengkang.
+*/
+const WHATSAPP_NUMBER = "60123456789";
+
+function whatsappLink(message) {
+    return "https://wa.me/" + WHATSAPP_NUMBER +
+        "?text=" + encodeURIComponent(message);
+}
+
+document.getElementById("whatsappBtn").href = whatsappLink(
+    "Salam, saya berminat dengan iklan peluang pekerjaan di Singapura. Mohon maklumat majikan, jawatan, gaji, syarat kelayakan dan proses permohonan."
+);
+
+document.querySelectorAll(".apply").forEach(function(button) {
+    button.addEventListener("click", function() {
+        const job = this.dataset.job;
+
+        window.open(
+            whatsappLink(
+                "Salam, saya berminat dengan jawatan " + job +
+                " di Singapura. Mohon maklumat majikan, gaji, lokasi, syarat dan status pengambilan pekerja Malaysia."
+            ),
+            "_blank",
+            "noopener"
+        );
+    });
+});
+
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
+'''
+path = Path("/mnt/data/index.html")
+path.write_text(html, encoding="utf-8")
+print(f"Fail HTML siap: {path}")
+print(f"Saiz fail: {path.stat().st_size} bytes")
