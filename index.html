@@ -1,267 +1,944 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
 
-<script async custom-element="amp-auto-ads"
-        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
-</script>
-    
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- MAIN SEO -->
 <title>KasuhaNET.STORE | Multi-Service Digital Platform</title>
-<meta name="google-adsense-account" content="ca-pub-4280897190566760">
-<meta property="og:image" content="https://kasuhanet.store/img/logo3.png">
-<meta name="description" content="KasuhaNET.STORE is a multi-service digital platform, marketplace solutions, technical services, digital tool..">
-<meta name="keywords" content="Kasuha Zukarnain,Kasuha Okulus,KasuhaNET, Kasuhanet Resources, web development, business ads, technical services">
+
+<meta name="description" content="KasuhaNET.STORE is a multi-service digital platform covering website development, Linux systems, automation, and digital monetization services.">
+
+<meta name="keywords" content="KasuhaNET, website service, Linux setup, affiliate system, digital monetization, automation">
+
 <meta name="author" content="Kasuhanet Resources">
-<meta name="robots", follow">
+<meta name="robots" content="index, follow">
 
-<!-- CANONICAL -->
-<link rel="canonical" href="">
+<link rel="canonical" href="https://kasuhanet.store/">
 
-<!-- FONT -->
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<!-- SWIPER CSS (PENTING UNTUK SLIDER) -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<style>
 
-<!-- FAVICON -->
-<link rel="icon" type="img/favicon.png" href="favicon.webp">
-<link rel="apple-touch-icon" href="favicon.webp">
+/* ========================================
+   GLOBAL
+======================================== */
 
-<!-- OPEN GRAPH -->
-<meta property="og:title" content="KasuhaNET.STORE | Multi-Service Digital Platform">
-<meta property="og:description" content="KasuhaNET.STORE is a multi-service digital platform covering website development, Linux systems, marketplace solutions, and technical services.">
-<meta property="og:image" content="https://kasuhanet.store/img/logo3.webp">
-<meta property="og:url" content="https://kasuhanet.store/">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="KasuhaNET.STORE">
-<meta property="og:locale" content="en_US">
+* {
+    box-sizing: border-box;
+}
 
-<!-- TWITTER -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="KasuhaNET.STORE | Multi-Service Digital Platform">
-<meta name="twitter:description" content="Modern digital platform covering technical services, website development, and the HMS ecosystem.">
-<meta name="twitter:image" content="https://kasuhanet.store/img/logo3.webp">
+html {
+    scroll-behavior: smooth;
+}
 
-<!-- MOBILE -->
-<meta name="theme-color" content="#05070d">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="googlebot" content="index, follow">
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #0f1115;
+    color: #eaeaea;
+    line-height: 1.7;
+}
 
-<!-- CSS -->
-<link rel="stylesheet" href="css/main.css">
-  
-  <title>KasuhaNET.Store | Digital Shop Platform Malaysia - Hybrid Sales Platform and Multi-Service Digital Tools</title>
-  <style>
-    :root {
-      --bg: #08090d;
-      --panel: #12141c;
-      --panel-2: #191b25;
-      --text: #f6f7fb;
-      --muted: #b9bdca;
-      --red: #ff304f;
-      --red-dark: #a90025;
-      --orange: #ff7a35;
-      --line: rgba(255,255,255,.12);
+a {
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* ========================================
+   HEADER
+======================================== */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 15px 5%;
+    background: rgba(17, 21, 34, 0.97);
+    border-bottom: 1px solid #252b3b;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(12px);
+}
+
+.brand {
+    color: #ffffff;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+nav a {
+    color: #d7dbea;
+    text-decoration: none;
+    font-size: 13px;
+    transition: color 0.25s ease;
+}
+
+nav a:hover {
+    color: #7196ff;
+}
+
+/* ========================================
+   LANGUAGE BUTTONS
+======================================== */
+
+.lang {
+    display: flex;
+    gap: 6px;
+    flex-shrink: 0;
+}
+
+.lang button {
+    padding: 7px 11px;
+    border: 1px solid #39445e;
+    border-radius: 6px;
+    background: #202638;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background 0.25s ease;
+}
+
+.lang button:hover {
+    background: #35466d;
+}
+
+.lang button.active {
+    background: #4f7cff;
+    border-color: #4f7cff;
+}
+
+/* ========================================
+   HERO
+======================================== */
+
+.hero {
+    text-align: center;
+    padding: 65px 20px 55px;
+    background:
+        radial-gradient(
+            ellipse at top,
+            rgba(54, 79, 145, 0.22),
+            transparent 65%
+        );
+}
+
+.hero img {
+    width: 120px;
+    height: auto;
+    margin: 10px;
+    object-fit: contain;
+}
+
+.hero h1 {
+    margin: 12px 0;
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(25px, 5vw, 42px);
+    line-height: 1.3;
+    color: #ffffff;
+}
+
+.hero p {
+    max-width: 650px;
+    margin: 0 auto;
+    color: #aeb8cc;
+    font-size: 15px;
+}
+
+/* ========================================
+   SECTIONS
+======================================== */
+
+.section {
+    max-width: 1100px;
+    padding: 35px 20px;
+    margin: auto;
+}
+
+.section h2 {
+    margin: 0 0 28px;
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(20px, 4vw, 27px);
+    color: #ffffff;
+}
+
+/* ========================================
+   GRID
+======================================== */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(min(100%, 240px), 1fr)
+    );
+    gap: 18px;
+    align-items: start;
+}
+
+/* ========================================
+   SERVICE CARDS
+======================================== */
+
+.card {
+    min-width: 0;
+    padding: 22px;
+    background: #151923;
+    border: 1px solid #252b3b;
+    border-radius: 12px;
+    color: #eaeaea;
+    text-decoration: none;
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    background: #1c2233;
+    border-color: #394d7c;
+}
+
+.card h3 {
+    margin: 0 0 10px;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.card p {
+    margin: 0 0 12px;
+    color: #b9c1d1;
+    font-size: 14px;
+}
+
+/* ========================================
+   CARD LINKS
+======================================== */
+
+.card-link {
+    display: inline-block;
+    margin-top: 8px;
+    color: #86a5ff;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.card-link:hover {
+    color: #b3c5ff;
+    text-decoration: underline;
+}
+
+/* ========================================
+   EXPANDABLE CONTENT
+   Slide Down + Fade
+======================================== */
+
+.expand-box {
+    margin-top: 14px;
+    border: 1px solid #343b4b;
+    border-radius: 9px;
+    overflow: hidden;
+}
+
+/* Toggle button */
+
+.expand-button {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 13px 14px;
+    border: none;
+    background: #202635;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+    transition: background 0.25s ease;
+}
+
+.expand-button:hover {
+    background: #293349;
+}
+
+.expand-button:focus-visible {
+    outline: 2px solid #86a5ff;
+    outline-offset: -3px;
+}
+
+/* Hidden content */
+
+.expand-content {
+    display: grid;
+    grid-template-rows: 0fr;
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        grid-template-rows 0.35s ease,
+        opacity 0.25s ease,
+        visibility 0.35s;
+}
+
+/* Inner content */
+
+.expand-inner {
+    min-height: 0;
+    overflow: hidden;
+    padding: 0 14px;
+    color: #c8cfdd;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* Open state */
+
+.expand-content.open {
+    grid-template-rows: 1fr;
+    opacity: 1;
+    visibility: visible;
+}
+
+.expand-content.open .expand-inner {
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+
+/* Icon */
+
+.expand-icon {
+    display: inline-block;
+    flex-shrink: 0;
+    font-size: 18px;
+    line-height: 1;
+    transition: transform 0.3s ease;
+}
+
+.expand-button[aria-expanded="true"] .expand-icon {
+    transform: rotate(45deg);
+}
+
+/* ========================================
+   FOOTER
+======================================== */
+
+footer {
+    background: #0b0d12;
+    border-top: 1px solid #222837;
+    padding: 40px 5% 20px;
+    margin-top: 40px;
+}
+
+.footer-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(min(100%, 200px), 1fr)
+    );
+    gap: 25px;
+}
+
+.footer-grid h3,
+.footer-grid h4 {
+    color: #ffffff;
+    margin-top: 0;
+}
+
+.footer-grid p {
+    color: #aab1c0;
+    font-size: 13px;
+}
+
+.footer-grid a {
+    display: inline-block;
+    margin-bottom: 6px;
+    color: #aeb8cc;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.footer-grid a:hover {
+    color: #86a5ff;
+}
+
+.footer-bottom {
+    max-width: 1100px;
+    margin: 28px auto 0;
+    padding-top: 18px;
+    border-top: 1px solid #222837;
+    text-align: center;
+    font-size: 12px;
+    color: #777f90;
+}
+
+/* ========================================
+   MOBILE RESPONSIVE
+======================================== */
+
+@media (max-width: 760px) {
+
+    header {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 13px 16px;
+        gap: 12px;
     }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      background: radial-gradient(circle at 80% 0%, rgba(255,48,79,.14), transparent 30%), var(--bg);
-      color: var(--text);
-      font-family: Inter, Arial, Helvetica, sans-serif;
-      line-height: 1.6;
-    }
-    a { color: inherit; text-decoration: none; }
-    .container { width: min(1120px, calc(100% - 36px)); margin: 0 auto; }
-    .topbar {
-      position: sticky; top: 0; z-index: 10;
-      background: rgba(8,9,13,.88); backdrop-filter: blur(14px);
-      border-bottom: 1px solid var(--line);
-    }
-    .nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
-    .brand { display: flex; align-items: center; gap: 11px; font-weight: 900; letter-spacing: .5px; }
-    .brand-mark {
-      width: 42px; height: 42px; display: grid; place-items: center; border-radius: 12px;
-      background: linear-gradient(135deg, var(--red), #ff814a); color: white; font-weight: 1000;
-      box-shadow: 0 0 28px rgba(255,48,79,.28);
-    }
-    .brand small { display: block; color: var(--muted); font-size: 10px; font-weight: 700; letter-spacing: 2px; }
-    .nav-links { display: flex; align-items: center; gap: 24px; color: #d8dbe4; font-size: 14px; }
-    .nav-links a:hover { color: #ff667d; }
-    .btn {
-      display: inline-flex; justify-content: center; align-items: center; gap: 8px;
-      padding: 12px 18px; border-radius: 10px; border: 1px solid transparent;
-      font-weight: 800; font-size: 14px; cursor: pointer; transition: .2s ease;
-    }
-    .btn-primary { background: linear-gradient(120deg, var(--red-dark), var(--red), var(--orange)); color: white; box-shadow: 0 8px 28px rgba(255,48,79,.2); }
-    .btn-primary:hover { transform: translateY(-2px); filter: brightness(1.1); }
-    .btn-outline { border-color: rgba(255,255,255,.2); color: white; background: rgba(255,255,255,.03); }
-    .btn-outline:hover { border-color: var(--red); }
-    .hero { padding: 78px 0 58px; overflow: hidden; }
-    .hero-grid { display: grid; grid-template-columns: 1.02fr .98fr; gap: 44px; align-items: center; }
-    .eyebrow { display: inline-flex; align-items: center; gap: 8px; color: #ff8b9c; font-size: 12px; font-weight: 900; letter-spacing: 2px; text-transform: uppercase; }
-    .eyebrow::before { content: ""; width: 25px; height: 2px; background: linear-gradient(90deg,var(--red),var(--orange)); }
-    h1 { font-size: clamp(36px, 5vw, 61px); line-height: 1.08; letter-spacing: -2px; margin: 18px 0; }
-    .gradient-text { background: linear-gradient(100deg,#fff 0%,#ff7187 48%,#ff9b52 100%); color: transparent; background-clip: text; -webkit-background-clip: text; }
-    .hero p { color: var(--muted); font-size: 17px; max-width: 610px; }
-    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 26px; }
-    .hero-points { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 28px; color: #e4e5eb; font-size: 13px; }
-    .hero-points span::before { content: "✓"; color: #ff657c; font-weight: 900; margin-right: 7px; }
-    .visual-card {
-      position: relative; border: 1px solid rgba(255,255,255,.13); border-radius: 24px; padding: 14px;
-      background: linear-gradient(145deg,rgba(255,48,79,.12),rgba(255,255,255,.025) 45%,rgba(255,122,53,.08));
-      box-shadow: 0 30px 90px rgba(0,0,0,.35);
-    }
-    .video-frame { background: #05060a; border-radius: 16px; overflow: hidden; position: relative; }
-    .video-frame video { width: 100%; aspect-ratio: 16/10; display: block; object-fit: cover; background: #10121a; }
-    .video-caption { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 5px 4px; }
-    .video-caption strong { display: block; font-size: 14px; }
-    .video-caption span { display: block; color: var(--muted); font-size: 12px; }
-    .live-dot { width: 9px; height: 9px; border-radius: 50%; background: #ff425e; box-shadow: 0 0 14px #ff425e; flex: 0 0 auto; }
-    .section { padding: 68px 0; }
-    .section-head { text-align: center; max-width: 720px; margin: 0 auto 36px; }
-    .section-head h2 { font-size: clamp(28px,4vw,42px); line-height: 1.15; margin: 12px 0; }
-    .section-head p { color: var(--muted); margin: 0; }
-    .service-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
-    .service-card { background: linear-gradient(145deg,var(--panel-2),var(--panel)); border: 1px solid var(--line); border-radius: 17px; padding: 24px; }
-    .service-icon { width: 46px; height: 46px; display: grid; place-items: center; border-radius: 13px; background: linear-gradient(135deg,rgba(255,48,79,.22),rgba(255,122,53,.13)); border: 1px solid rgba(255,90,110,.25); font-size: 22px; }
-    .service-card h3 { margin: 16px 0 8px; font-size: 18px; }
-    .service-card p { color: var(--muted); font-size: 14px; margin: 0; }
-    .pricing { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 22px; align-items: stretch; }
-    .price-card { position: relative; display: flex; flex-direction: column; background: linear-gradient(160deg,#151720,#0e0f15); border: 1px solid rgba(255,255,255,.13); border-radius: 22px; padding: 30px; overflow: hidden; }
-    .price-card.premium { border-color: rgba(255,65,91,.65); box-shadow: 0 18px 55px rgba(255,48,79,.11); }
-    .price-card.premium::before { content: ""; position: absolute; height: 3px; top: 0; left: 0; right: 0; background: linear-gradient(90deg,var(--red),var(--orange),#ffb15b); }
-    .plan-tag { align-self: flex-start; background: rgba(255,255,255,.07); color: #e7e8ef; border: 1px solid var(--line); padding: 5px 10px; border-radius: 999px; font-size: 11px; font-weight: 900; letter-spacing: 1px; }
-    .premium .plan-tag { background: rgba(255,48,79,.15); color: #ff9aaa; border-color: rgba(255,48,79,.3); }
-    .price-card h3 { font-size: 28px; margin: 14px 0 4px; }
-    .price-sub { color: var(--muted); font-size: 14px; margin: 0 0 18px; }
-    .price { font-size: 38px; font-weight: 950; letter-spacing: -1px; margin: 4px 0 2px; }
-    .price small { font-size: 13px; font-weight: 600; letter-spacing: 0; color: var(--muted); }
-    .price-note { color: #9fa4b4; font-size: 12px; margin-bottom: 20px; }
-    .feature-list { list-style: none; margin: 0 0 28px; padding: 0; flex: 1; }
-    .feature-list li { padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,.07); color: #e4e6ed; font-size: 14px; }
-    .feature-list li::before { content: "✓"; color: #ff657c; font-weight: 900; margin-right: 10px; }
-    .price-card .btn { width: 100%; }
-    .upgrade-note { margin-top: 22px; padding: 16px 18px; border: 1px dashed rgba(255,112,132,.35); border-radius: 14px; color: var(--muted); font-size: 13px; background: rgba(255,48,79,.045); }
-    .upgrade-note strong { color: #fff; }
-    .process-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 14px; counter-reset: step; }
-    .process-card { border: 1px solid var(--line); border-radius: 15px; padding: 20px; background: rgba(255,255,255,.025); counter-increment: step; }
-    .process-card::before { content: "0" counter(step); color: #ff7187; font-size: 12px; font-weight: 900; letter-spacing: 2px; }
-    .process-card h3 { font-size: 16px; margin: 10px 0 5px; }
-    .process-card p { font-size: 13px; color: var(--muted); margin: 0; }
-    .cta-box { padding: 36px; border: 1px solid rgba(255,70,96,.28); border-radius: 22px; background: radial-gradient(circle at 90% 0%,rgba(255,122,53,.18),transparent 36%),linear-gradient(135deg,rgba(255,48,79,.11),rgba(255,255,255,.025)); display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-    .cta-box h2 { margin: 0 0 8px; font-size: clamp(25px,3vw,36px); }
-    .cta-box p { margin: 0; color: var(--muted); }
-    footer { border-top: 1px solid var(--line); margin-top: 30px; padding: 28px 0; color: #aeb2c0; font-size: 12px; }
-    .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
-    .whatsapp-float {
-      position: fixed; right: 20px; bottom: 20px; z-index: 30; width: 60px; height: 60px; border-radius: 50%;
-      display: grid; place-items: center; color: #fff; background: linear-gradient(135deg,#25d366,#0b9d58);
-      box-shadow: 0 10px 30px rgba(37,211,102,.35); border: 2px solid rgba(255,255,255,.85); transition: transform .2s;
-    }
-    .whatsapp-float:hover { transform: translateY(-4px) scale(1.04); }
-    .whatsapp-float svg { width: 30px; height: 30px; fill: currentColor; }
-    @media (max-width: 850px) {
-      .hero-grid { grid-template-columns: 1fr; }
-      .hero { padding-top: 50px; }
-      .service-grid { grid-template-columns: 1fr 1fr; }
-      .process-grid { grid-template-columns: 1fr 1fr; }
-      .nav-links { gap: 13px; }
-      .nav-links a:not(.btn) { display: none; }
-    }
-    @media (max-width: 580px) {
-      .container { width: min(100% - 28px,1120px); }
-      .nav { min-height: 66px; }
-      .brand { font-size: 14px; }
-      .brand-mark { width: 37px; height: 37px; }
-      .nav-links .btn { padding: 10px 12px; font-size: 12px; }
-      .hero { padding: 42px 0 30px; }
-      h1 { letter-spacing: -1.3px; }
-      .hero p { font-size: 15px; }
-      .section { padding: 48px 0; }
-      .service-grid, .pricing, .process-grid { grid-template-columns: 1fr; }
-      .price-card { padding: 24px; }
-      .cta-box { padding: 25px; align-items: flex-start; flex-direction: column; }
-      .whatsapp-float { width: 56px; height: 56px; right: 15px; bottom: 15px; }
+
+    .brand {
+        font-size: 16px;
     }
 
-    .notice-box,.profile-box,.warning-box,.partner-box,.reading-box { border:1px solid var(--line); border-radius:18px; padding:24px; background:linear-gradient(145deg,rgba(255,48,79,.08),rgba(255,255,255,.025)); margin-top:20px; }
-    .notice-date { color:#ff9aaa; font-weight:900; letter-spacing:1px; }
-    .tag-list { display:flex; flex-wrap:wrap; gap:10px; padding:0; list-style:none; }
-    .tag-list li { border:1px solid rgba(255,90,110,.25); border-radius:999px; padding:8px 12px; background:rgba(255,48,79,.08); font-size:13px; }
-    .subnav { display:flex; gap:10px; flex-wrap:wrap; margin-top:18px; }
-    .link-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
-    .link-card { border:1px solid var(--line); background:rgba(255,255,255,.025); padding:18px; border-radius:14px; }
-    .link-card a { color:#ff899a; font-weight:800; }
-    .warning-box { border-color:rgba(255,48,79,.5); }
-    .partner-banner { width:100%; max-width:320px; height:auto; border-radius:12px; margin:12px 0; }
-    .small-muted { color:var(--muted); font-size:13px; }
-    @media(max-width:850px){.link-grid{grid-template-columns:1fr 1fr}}
-    @media(max-width:580px){.link-grid{grid-template-columns:1fr}}
-  </style>
-</head>
-<body>
-<header class="topbar">
-  <div class="container nav">
-    <a class="brand" href="#home" aria-label="KasuhaNET halaman utama"><span class="brand-mark">K<span style="color:#171820">N</span></span><span>KasuhaNET.STORE<small>DIGITAL STORE PLATFORM</small></span></a>
-    <nav class="nav-links" aria-label="Navigasi utama">
-      <a href="#home">HOME</a><a href="#about">ABOUT US</a><a href="https://kasuhanet.store/terms.html">TERMS & POLICY</a><a href="https://kasuhanet.store/support-centreEN.html">SUPPORT</a>
-      <a class="btn btn-primary" href="#pakej">Lihat Pakej ↗</a>
-    </nav>
-  </div>
-</header>
-<main>
-<section class="hero" id="home"><div class="container hero-grid"><div>
-  <span class="eyebrow">Hybrid Sales • Multi-Service • Digital Tools</span>
-  <h1><span class="gradient-text">KasuhaNET.STORE</span><br>Digital Shop Platform</h1>
-  <p>Hybrid selling and Multi-Service Digital Platform — menghubungkan pembangunan website, servis digital, sokongan affiliate dan alat digital dalam satu platform.</p>
-  <div class="hero-actions"><a class="btn btn-primary" href="#pakej">Website Development →</a><a class="btn btn-outline" href="https://kasuhanet.store/Custom-Web-Workshop-EN">Terminal Choice / Custom Web</a></div>
-  <div class="hero-points"><span>Website & digital systems</span><span>Servis fleksibel</span><span>Pilihan Standard & Premium</span></div>
-  <div class="subnav"><a class="btn btn-outline" href="https://kasuhanet.store/CommandCanDoLIST.html">Terminal Options</a><a class="btn btn-outline" href="https://kasuhanet.store/ShopAffliateSupport.html">Affiliate Support</a></div>
-</div><div class="visual-card"><div class="video-frame"><video autoplay muted loop playsinline controls preload="metadata"><source src="https://files.catbox.moe/6zu98v.mp4" type="video/mp4">Browser anda tidak menyokong video HTML5.</video></div><div class="video-caption"><div><strong>KasuhaNET Website Showcase</strong><span>Pratonton visual website dan servis digital</span></div><span class="live-dot" aria-label="Video demo"></span></div></div></div></section>
+    nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 18px;
+        padding-top: 8px;
+        border-top: 1px solid #252b3b;
+    }
 
-<section class="section" id="organisation" style="padding-top:10px"><div class="container"><div class="section-head"><span class="eyebrow">Organisation & Collaboration</span><h2>Powered by Collaboration of <span class="gradient-text">Organisations & Companies</span></h2><p><strong>Kasuha Oculus Organisation</strong> • <strong>Kasuhanet Resources</strong></p><p class="small-muted">KasuhaNET.STORE is presented as a digital platform under Kasuhanet Resources and the Kasuha Oculus Organisation framework.</p></div><div class="link-grid"><div class="link-card"><h3>🌍 Rwanda (Africa)</h3><a href="https://kasuhanet.store/Rwanda-SupportDevelopement.html">Rwanda Support & Development ↗</a></div><div class="link-card"><h3>🌏 Timor Leste (Asia)</h3><a href="https://kasuhanet.store/Timor-Leste-SupportDevelopement.html">Timor Leste Support & Development ↗</a></div><div class="link-card"><h3>Terminal Codex</h3><p>Technical references and terminal support.</p><a href="https://kasuhanet.store/CommandCanDoLIST.html">Open Codex ↗</a></div></div></div></section>
-<section class="section" id="announcement"><div class="container"><div class="section-head"><span class="eyebrow">Platform Announcement</span><h2>Announcement — Planned Addition of <span class="gradient-text">Service+</span></h2><p>Makluman kepada pelanggan dan pengunjung KasuhaNET.STORE.</p></div>
-<div class="notice-box"><div class="notice-date">9 SEPTEMBER 2026</div><p><strong>For the Information of Kasuhanet Customers & Visitors:</strong> Kasuhanet merancang pengenalan Service+, iaitu peluasan skop perkhidmatan dan peluang perniagaan yang ditawarkan melalui platform Kasuhanet.store. Penyedia perkhidmatan bergantung pada bidang berkaitan dan keperluan pelanggan.</p><ul class="feature-list"><li><strong>TAKAFUL & INSURANCE</strong></li><li><strong>PROPERTY CONSULTANCY / REAL ESTATE</strong></li><li><strong>EMPLOYMENT AGENCY SERVICES</strong></li><li><strong>DIY CUSTOM ELECTRONIC DESIGN</strong></li><li><strong>PRIVATE DELIVERY RIDER</strong></li></ul><p><strong>Service+ Direction:</strong> Pengenalan Service+ ialah sebahagian daripada perancangan Kasuhanet untuk membangunkan ekosistem perkhidmatan yang lebih luas. Perkhidmatan dan perkembangan baharu akan diumumkan dari semasa ke semasa melalui Kasuhanet.store. Terima kasih atas sokongan dan kepercayaan anda.</p></div></div></section>
+    nav a {
+        font-size: 12px;
+    }
 
-<section class="section" id="servis"><div class="container"><div class="section-head"><span class="eyebrow">Web Development & Digital Infrastructure</span><h2>Professional Web Development <span class="gradient-text">by KasuhaNET</span></h2><p>Do you want a digital presence that looks professional, performs to a high standard, and is built to current industry specifications? <strong>KasuhaNET Resources</strong> provides web development solutions from essential landing pages to multi-page systems, supported by server management and terminal configuration.</p></div>
-<div class="service-grid"><article class="service-card"><div class="service-icon">⌘</div><h3>Maximum Performance & Speed</h3><p>Kecekapan kod, pemampatan imej dan pengurusan sumber untuk membantu halaman dimuatkan dengan pantas.</p></article><article class="service-card"><div class="service-icon">▣</div><h3>Mobile-Friendly Design</h3><p>Paparan responsif untuk telefon pintar, tablet, komputer riba dan desktop.</p></article><article class="service-card"><div class="service-icon">🔒</div><h3>Data Security & Licensing</h3><p>Struktur web yang kemas, HTTPS/SSL dan tetapan kebenaran fail yang bersesuaian.</p></article><article class="service-card"><div class="service-icon">⌘</div><h3>Terminal & Linux Server</h3><p>Bantuan pengurusan persekitaran Linux termasuk Linux pada Penguin/ChromeOS, kebergantungan library dan skrip sistem.</p></article><article class="service-card"><div class="service-icon">⚙</div><h3>Custom Web Workshop</h3><p>Pilih komponen dan alat secara modular berdasarkan keperluan serta bajet projek.</p><a href="https://kasuhanet.store/Custom-Web-Workshop-EN" class="btn btn-outline" style="margin-top:16px">⬅️ Click Here</a></article><article class="service-card"><div class="service-icon">↗</div><h3>Terminal Options & Affiliate</h3><p>Teroka pilihan terminal, sokongan affiliate dan servis digital lain yang tersedia di platform.</p><div class="subnav"><a href="https://kasuhanet.store/CommandCanDoLIST.html">Terminal Options</a><a href="https://kasuhanet.store/ShopAffliateSupport.html">Affiliate Support</a></div></article></div></div></section>
+    .hero {
+        padding: 45px 18px;
+    }
 
-<section class="section" id="about"><div class="container"><div class="section-head"><span class="eyebrow">Founder & Developer</span><h2>Hi, I'm <span class="gradient-text">Kasuha Zukarnain</span></h2><p>CallSign: Kasuha Zukarnain • 8–9 Years Developer Experience</p></div><div class="profile-box"><ul class="feature-list"><li><strong>Development & Founding:</strong> Lead developer behind the Kasuhanet.Store platform, founder of Kasuhanet Resources for business operations, and creator of Kasuha Oculus Organisation.</li><li><strong>Code Precision:</strong> Minat terhadap struktur kod yang kemas dan logik pengaturcaraan untuk membina fungsi digital yang lancar.</li><li><strong>OS & Android Enthusiast:</strong> Fokus pada sistem dalaman Android dan Operating Systems (OS), termasuk penerokaan konfigurasi yang meningkatkan prestasi dan reka bentuk perisian.</li><li><strong>Strategy & Monetization:</strong> Membangunkan sistem dan analisis data dengan matlamat pertumbuhan kewangan yang mampan melalui ekosistem perniagaan.</li></ul><p><strong>System & Architecture | Kasuha Oculus Framework</strong></p></div></div></section>
+    .hero img {
+        width: 95px;
+    }
 
-<section class="section" id="referral"><div class="container"><div class="section-head"><span class="eyebrow">New Program Referral</span><h2>Register for a <span class="gradient-text">Hong Leong Bank Account</span></h2><p>Use your referral code and check the bank's current sign-up terms and available rewards.</p><a class="btn btn-primary" href="https://www.hlb.com.my/en/personal-banking/deposits/apply-at-hlb-connect.html" target="_blank" rel="noopener">Sign Up Now ↗</a></div></div></section>
+    .hero p {
+        font-size: 14px;
+    }
 
-<section class="section" id="pakej"><div class="container"><div class="section-head"><span class="eyebrow">Service Package Details</span><h2>Website Development <span class="gradient-text">Packages</span></h2><p>Pilih pakej berdasarkan struktur kandungan, fungsi dan keperluan perniagaan anda.</p></div>
-<div class="notice-box"><h3>🟢 Package 1: Landing Page (Single Page)</h3><p>Ideal untuk kempen satu produk, borang pesanan ringkas, promosi iklan Facebook/TikTok/Google Ads atau pengenalan profil perniagaan.</p><p><strong>Page Structure:</strong> Satu halaman lengkap dengan navigasi scroll yang lancar.</p><ul class="feature-list"><li>Hero section dengan tajuk, sub-tajuk dan butang Call to Action.</li><li>Showcase produk/perkhidmatan dengan ciri, kelebihan dan spesifikasi.</li><li>Galeri visual yang dioptimumkan.</li><li>Butang WhatsApp terus tanpa perlu pelanggan menyimpan nombor.</li><li>Google Maps dan maklumat hubungan.</li><li>Meta tag asas untuk carian Google dan penyediaan fail sistem utama.</li></ul></div>
-<div class="pricing" style="margin-top:22px"><article class="price-card"><span class="plan-tag">LANDING PAGE</span><h3>Landing Page Package</h3><div class="price">RM 299 <small>++</small></div><p class="price-sub">Untuk kempen pemasaran, pelancaran produk ringkas dan mini shop portfolio.</p><ul class="feature-list"><li>1 halaman utama (single-page design)</li><li>Struktur kod responsif untuk telefon</li><li>Pengoptimuman Google AdSense</li><li>Call-to-action WhatsApp / borang</li><li>Domain tersuai tidak termasuk</li></ul><a class="btn btn-primary" href="https://toyyibpay.com/L-P-P-LPP299" target="_blank" rel="noopener">Subscribe Now ↗</a></article>
-<article class="price-card premium"><span class="plan-tag">POPULAR</span><h3>Premium Standard</h3><div class="price">RM 900 <small>++</small></div><p class="price-sub">Sistem pengurusan lengkap untuk kelab, persatuan dan profil perniagaan dinamik.</p><ul class="feature-list"><li>Deploy website berbilang halaman</li><li>Custom Content Management System</li><li>Google AdSense dan advanced SEO</li><li>Showcase produk / galeri aktiviti kelab</li><li>Sokongan domain tersuai (.com/.my)</li><li>Premium Cyberpunk UI/UX style</li></ul><a class="btn btn-primary" href="https://toyyibpay.com/P-MS-Pay-PREMIUM-STANDARD" target="_blank" rel="noopener">Upgrade to Premium ↗</a></article></div>
-<div class="notice-box"><h3>🟣 Package 2: Premium Website (Multi-Page System)</h3><p>Untuk syarikat korporat, agensi, penyedia servis teknikal, kedai dalam talian dan organisasi yang memerlukan struktur maklumat terperinci.</p><p><strong>Page Structure:</strong> Pembangunan sehingga 5–10 halaman utama seperti Home, About Us, Services, Blog/Documentation Center dan Contact Us.</p><ul class="feature-list"><li>Reka bentuk eksklusif mengikut penjenamaan dan identiti visual bisnes.</li><li>Blog / Codex section untuk artikel, panduan teknikal dan arahan terminal.</li><li>Borang pertanyaan dan tempahan yang menghantar notifikasi ke e-mel atau pangkalan data.</li><li>Integrasi pautan media sosial dan payment gateway jika diperlukan.</li><li>SEO, pengurusan kata kunci, struktur heading H1/H2/H3, XML sitemap dan Google Search Console.</li></ul></div>
-<div class="upgrade-note"><strong>Nota:</strong> Harga dan skop akhir tertakluk kepada persetujuan, keperluan teknikal, domain/hosting serta integrasi pihak ketiga.</div></div></section>
+    .section {
+        padding: 28px 16px;
+    }
 
-<section class="section" id="solutions"><div class="container"><div class="section-head"><span class="eyebrow">Solutions For You</span><h2>Teroka <span class="gradient-text">Servis & Program</span></h2></div><div class="link-grid"><div class="link-card"><h3>Terminal Choice</h3><p>Rujukan arahan dan pilihan terminal.</p><a href="https://kasuhanet.store/CommandCanDoLIST.html">Open Terminal Options ↗</a></div><div class="link-card"><h3>Affiliate Support</h3><p>Sokongan affiliate dan peluang promosi.</p><a href="https://kasuhanet.store/ShopAffliateSupport.html">Open Affiliate Support ↗</a></div><div class="link-card"><h3>E-Learning Plans</h3><p>Pelan pembelajaran web selepas pembelian pakej website bermula RM299–RM345; semak butiran program sebelum mendaftar.</p><a href="https://kasuhanet.store/Website-Service.html">Explore Web Services ↗</a></div><div class="link-card"><h3>Emergency Financial Services+</h3><p>Maklumat perkhidmatan PayLater Cashout.</p><a href="https://kasuhanet.store/CashOutServicePayLater.html">PayLater Cashout ↗</a></div><div class="link-card"><h3>Ryt Bank Referral</h3><p>Program referral pihak ketiga.</p><a href="https://referrals.rytbank.my/MCoA/gq8xkdot" target="_blank" rel="noopener">Ryt Register Invite ↗</a></div><div class="link-card"><h3>VPS Malaysia</h3><p>Pautan rakan affiliate untuk perkhidmatan VPS.</p><a href="https://vpsmalaysia.com.my/system/aff.php?aff=2530" target="_blank" rel="noopener">Banner Ads VPSMalaysia ↗</a></div></div></div></section>
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
 
-<section class="section" id="bjak"><div class="container"><div class="partner-box"><span class="eyebrow">Official Partner / Referral</span><h2>Renew Insurance & Roadtax with <span class="gradient-text">BJAK</span></h2><p>Get quotes from 15+ car and motorcycle insurance companies online. Semak syarat, harga dan kelayakan terus dengan penyedia.</p><ul class="tag-list"><li>✓ 100% Online</li><li>✓ Instant Discount (tertakluk tawaran)</li><li>✓ Roadtax Delivery (tertakluk syarat)</li></ul><p><strong>Referral reward: RM25 reward / cashback</strong> — tertakluk terma program semasa.</p><a class="btn btn-primary" href="https://bjak.my/ref/mohamadslbr" target="_blank" rel="noopener">Get Free Quote ❯</a></div></div></section>
+    .card {
+        padding: 18px;
+    }
 
-<section class="section" id="scam"><div class="container"><div class="warning-box"><h2>⚠️ Beware of Scammer Fraud!</h2><p><strong>Please take note:</strong> Kami mengambil serius aktiviti penipuan. Pihak tidak sah mungkin menyalahgunakan nama perniagaan atau identiti pemilik KasuhaNET.STORE untuk tujuan penipuan kewangan.</p><p><strong>Important Notice:</strong> Urus niaga rasmi hendaklah disahkan melalui akaun bank berdaftar di bawah <strong>Kasuhanet Resources</strong> dan <strong>Kasuha Oculus Organisation</strong> sahaja. Sahkan butiran pembayaran melalui saluran rasmi sebelum membuat sebarang transaksi.</p><p class="small-muted">KasuhaNET tidak bertanggungjawab terhadap kerugian kewangan akibat urusan dengan pihak ketiga yang tidak diberi kuasa, tertakluk kepada undang-undang yang terpakai.</p></div></div></section>
+    footer {
+        padding: 32px 18px 18px;
+    }
+}
 
-<section class="section" id="reading"><div class="container"><div class="section-head"><span class="eyebrow">Reading Center</span><h2>Terminal Codex & <span class="gradient-text">Technical Support</span></h2><p>Koleksi arahan pemasangan kebergantungan dan pengurusan data web untuk Linux, Penguin dan persekitaran terminal.</p></div><div class="service-grid"><article class="service-card"><div class="service-icon">⌘</div><h3>Dependency Setup</h3><p>Koleksi arahan terminal untuk memasang pakej perisian pada persekitaran Linux dan Penguin dengan langkah yang ringkas.</p></article><article class="service-card"><div class="service-icon">▤</div><h3>Web Data Management</h3><p>Bantuan pengurusan log, pengoptimuman pangkalan data dan sandaran automatik.</p></article><article class="service-card"><div class="service-icon">⚙</div><h3>VPS / Linux Support</h3><p>Sokongan persekitaran web tersuai atau pengurusan perisian pada VPS/Linux berdasarkan skop dan akses yang dipersetujui.</p></article></div><div class="notice-box"><h3>End-to-End Workflow</h3><ol><li><strong>Pembelian pakej:</strong> Pilih varian Landing Page atau Premium dan lengkapkan pembayaran melalui pautan yang disediakan.</li><li><strong>Sesi briefing:</strong> Hubungi melalui saluran perbincangan yang dipersetujui. Maklumat seperti logo, teks, gambar produk dan pautan sosial akan diperlukan.</li><li><strong>Pembangunan & reka bentuk:</strong> Struktur kod, reka bentuk visual dan integrasi dibina mengikut pakej.</li><li><strong>Semakan & ujian:</strong> Pautan pratonton diberikan untuk semakan; paparan mudah alih dan prestasi halaman diuji.</li><li><strong>Pelancaran & serahan:</strong> Website diterbitkan di domain yang dipersetujui. Akses pentadbir dan dokumentasi diserahkan jika termasuk dalam skop.</li></ol><h3>Terms & Conditions of Service</h3><ul class="feature-list"><li><strong>Domain & Hosting:</strong> Kos bergantung pada penggunaan domain/hosting sedia ada atau pembelian baharu.</li><li><strong>Content:</strong> Teks dan bahan imej disediakan oleh pelanggan; bantuan penyusunan semula teks boleh dibincangkan.</li><li><strong>After-Sales Support:</strong> Sokongan teknikal asas percuma selama 30 hari selepas serahan projek, tertakluk skop yang dipersetujui.</li></ul></div></div></section>
+/* ========================================
+   ACCESSIBILITY
+======================================== */
 
-<section class="section" id="hubungi"><div class="container"><div class="cta-box"><div><h2>Bangunkan Kehadiran Digital Anda.</h2><p>Hubungi KasuhaNET untuk berbincang tentang website, servis digital, setup teknikal atau naik taraf sistem.</p><p class="small-muted">E-mel: support@kasuhanet.store</p></div><a class="btn btn-primary" id="main-whatsapp" href="https://wa.me/60123456789" target="_blank" rel="noopener">Hubungi / Minta Sebut Harga ↗</a></div></div></section>
-</main>
-<footer><div class="container footer-inner"><div><strong>KasuhaNET.STORE | Digital Store Platform</strong><br><span>Services: CommandCanDo • MyAffiliate • PayLater BNPL</span><br><span>Resources: About Us • Support • Terms & Policy</span></div><div><span>Follow Us: </span><a href="https://www.facebook.com/share/1BfeDZJqjP/" target="_blank" rel="noopener">Facebook</a> · <a href="https://tiktok.com/@kasuhanet.store" target="_blank" rel="noopener">TikTok</a> · <a href="https://t.me/kasuhanetstorebot" target="_blank" rel="noopener">Telegram</a><br><span>© <span id="year"></span> <strong>KasuhaNET Resources (202503248308). All Rights Reserved.</strong></span></div></div></footer>
-<a class="whatsapp-float" id="floating-whatsapp" href="https://wa.me/60123456789" target="_blank" rel="noopener" aria-label="Hubungi KasuhaNET melalui WhatsApp"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.02 3C8.86 3 3.04 8.8 3.04 15.94c0 2.28.6 4.5 1.75 6.46L3 29l6.78-1.77a13.05 13.05 0 0 0 6.23 1.58h.01c7.15 0 12.97-5.8 12.97-12.94A12.9 12.9 0 0 0 16.02 3zm0 23.62h-.01a10.8 10.8 0 0 1-5.5-1.5l-.4-.24-4.02 1.05 1.07-3.91-.26-.4a10.7 10.7 0 0 1-1.65-5.68c0-5.93 4.83-10.75 10.78-10.75 2.88 0 5.59 1.12 7.62 3.15a10.67 10.67 0 0 1 3.15 7.6c0 5.93-4.83 10.75-10.78 10.75zm5.91-8.05c-.32-.16-1.9-.94-2.2-1.05-.3-.11-.51-.16-.73.16-.21.32-.83 1.05-1.02 1.27-.19.21-.38.24-.7.08-.32-.16-1.35-.5-2.57-1.6-.95-.84-1.6-1.88-1.79-2.2-.19-.32-.02-.49.14-.65.14-.14.32-.38.48-.57.16-.19.32-.21.54-.03.16-.08-.73-1.75-1-2.4-.26-.63-.53-.54-.73-.55h-.62c-.21 0-.56.4-.86.4-.3.32-1.13 1.1-1.13 2.68s1.16 3.1 1.32 3.31c.21.32 2.28 3.48 5.53 4.88.77.33 1.37.53 1.84.68.77.24 1.47.21 2.02.13.62-.09 1.9-.78 2.17-1.53.27-.75.19-1.4.19-1.53-.08-.14-.29-.22-.61-.38z"/></svg></a>
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}
+
+</style>
+
 <script>
-const WHATSAPP_NUMBER = "60123456789"; // Tukar kepada nombor rasmi, format antarabangsa tanpa + atau ruang.
-const DEFAULT_MESSAGE = "Hai, saya berminat dengan servis KasuhaNET.STORE.";
-const waURL = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(DEFAULT_MESSAGE);
-document.getElementById("floating-whatsapp").href = waURL;
-document.getElementById("main-whatsapp").href = waURL;
-document.getElementById("year").textContent = new Date().getFullYear();
+
+/* ========================================
+   LANGUAGE SYSTEM
+======================================== */
+
+function setLang(lang) {
+
+    document.documentElement.lang =
+        lang === "ms" ? "ms" : "en";
+
+    document.querySelectorAll("[data-en][data-ms]").forEach(el => {
+
+        const text = lang === "ms"
+            ? el.getAttribute("data-ms")
+            : el.getAttribute("data-en");
+
+        if (text !== null) {
+            el.textContent = text;
+        }
+
+    });
+
+    document.querySelectorAll(".lang button").forEach(button => {
+
+        const isActive =
+            button.textContent.trim().toLowerCase() ===
+            (lang === "ms" ? "bm" : "en");
+
+        button.classList.toggle("active", isActive);
+
+        button.setAttribute(
+            "aria-pressed",
+            String(isActive)
+        );
+
+    });
+
+}
+
+/* ========================================
+   EXPAND / COLLAPSE SYSTEM
+======================================== */
+
+function toggleExpand(button) {
+
+    const content = button.nextElementSibling;
+
+    if (!content ||
+        !content.classList.contains("expand-content")) {
+        return;
+    }
+
+    const isOpen =
+        button.getAttribute("aria-expanded") === "true";
+
+    button.setAttribute(
+        "aria-expanded",
+        String(!isOpen)
+    );
+
+    content.classList.toggle("open", !isOpen);
+
+}
+
+/* ========================================
+   INITIAL SETTINGS
+======================================== */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    setLang("en");
+
+});
+
 </script>
+
+</head>
+
+<body>
+
+<!-- ========================================
+     HEADER
+======================================== -->
+
+<header>
+
+    <a href="index.html" class="brand">
+        KasuhaNET
+    </a>
+
+    <nav aria-label="Main navigation">
+
+        <a href="index.html"
+           data-en="HOME"
+           data-ms="UTAMA">
+            HOME
+        </a>
+
+        <a href="About.html"
+           data-en="ABOUT"
+           data-ms="TENTANG">
+            ABOUT
+        </a>
+
+        <a href="terms.html"
+           data-en="TERMS"
+           data-ms="TERMA">
+            TERMS
+        </a>
+
+        <a href="Support.html"
+           data-en="SUPPORT"
+           data-ms="SOKONGAN">
+            SUPPORT
+        </a>
+
+    </nav>
+
+    <div class="lang" aria-label="Language selection">
+
+        <button type="button"
+                class="active"
+                aria-pressed="true"
+                onclick="setLang('en')">
+            EN
+        </button>
+
+        <button type="button"
+                aria-pressed="false"
+                onclick="setLang('ms')">
+            BM
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- ========================================
+     HERO
+======================================== -->
+
+<section class="hero">
+
+    <img
+        src="img/LogoMain.webp"
+        alt="KasuhaNET.STORE logo"
+        width="120"
+    >
+
+    <h1>KasuhaNET.STORE</h1>
+
+    <p
+        data-en="Multi-service digital platform for web, automation & monetization systems."
+        data-ms="Platform digital pelbagai perkhidmatan untuk website, automasi dan sistem penjanaan pendapatan.">
+
+        Multi-service digital platform for web, automation & monetization systems.
+
+    </p>
+
+</section>
+
+
+<!-- ========================================
+     SERVICES
+======================================== -->
+
+<section class="section" id="services">
+
+    <h2
+        data-en="Services"
+        data-ms="Perkhidmatan">
+
+        Services
+
+    </h2>
+
+    <div class="grid">
+
+        <!-- LINUX SETUP -->
+
+        <article class="card">
+
+            <h3>Linux Setup</h3>
+
+            <p
+                data-en="Linux environments, automation and system configuration."
+                data-ms="Persekitaran Linux, automasi dan konfigurasi sistem.">
+
+                Linux environments, automation and system configuration.
+
+            </p>
+
+            <div class="expand-box">
+
+                <button
+                    type="button"
+                    class="expand-button"
+                    onclick="toggleExpand(this)"
+                    aria-expanded="false">
+
+                    <span
+                        data-en="More Information"
+                        data-ms="Maklumat Lanjut">
+
+                        More Information
+
+                    </span>
+
+                    <span class="expand-icon" aria-hidden="true">＋</span>
+
+                </button>
+
+                <div class="expand-content">
+
+                    <div class="expand-inner">
+
+                        <p
+                            data-en="Explore Linux setup, terminal environments, system configuration and automation-related services."
+                            data-ms="Terokai persediaan Linux, persekitaran terminal, konfigurasi sistem dan perkhidmatan berkaitan automasi.">
+
+                            Explore Linux setup, terminal environments, system configuration and automation-related services.
+
+                        </p>
+
+                        <a
+                            class="card-link"
+                            href="ManyTerminalChoice.html"
+                            data-en="Explore Linux Setup →"
+                            data-ms="Terokai Linux Setup →">
+
+                            Explore Linux Setup →
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- AFFILIATE SYSTEM -->
+
+        <article class="card">
+
+            <h3>Affiliate System</h3>
+
+            <p
+                data-en="Monetization and digital business setup."
+                data-ms="Persediaan penjanaan pendapatan dan perniagaan digital.">
+
+                Monetization and digital business setup.
+
+            </p>
+
+            <a
+                href="ShopAffliateSupport.html"
+                class="card-link"
+                data-en="Explore Affiliate System →"
+                data-ms="Terokai Sistem Affiliate →">
+
+                Explore Affiliate System →
+
+            </a>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- ========================================
+     E-LEARN AND FINANCE
+======================================== -->
+
+<section class="section" id="elearn">
+
+    <h2>Plan E-LEARN</h2>
+
+    <div class="grid">
+
+        <!-- WEBSITE LEARNING -->
+
+        <article class="card">
+
+            <h3
+                data-en="Website Learning"
+                data-ms="Pembelajaran Website">
+
+                Website Learning
+
+            </h3>
+
+            <p
+                data-en="Step-by-step website development system."
+                data-ms="Sistem pembelajaran pembangunan website langkah demi langkah.">
+
+                Step-by-step website development system.
+
+            </p>
+
+            <a
+                href="Website-Service.html"
+                class="card-link"
+                data-en="Learn More →"
+                data-ms="Ketahui Lanjut →">
+
+                Learn More →
+
+            </a>
+
+        </article>
+
+
+        <!-- FINANCE SERVICE -->
+
+        <article class="card">
+
+            <h3
+                data-en="Finance Service"
+                data-ms="Perkhidmatan Kewangan">
+
+                Finance Service
+
+            </h3>
+
+            <p
+                data-en="PayLater and financial support system information."
+                data-ms="Maklumat sistem PayLater dan sokongan kewangan.">
+
+                PayLater and financial support system information.
+
+            </p>
+
+            <a
+                href="BNPL.html"
+                class="card-link"
+                data-en="View Information →"
+                data-ms="Lihat Maklumat →">
+
+                View Information →
+
+            </a>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- ========================================
+     FOOTER
+======================================== -->
+
+<footer>
+
+    <div class="footer-grid">
+
+        <!-- BRAND INFORMATION -->
+
+        <div>
+
+            <h3>KasuhaNET</h3>
+
+            <p
+                data-en="Digital ecosystem for automation, web systems and monetization."
+                data-ms="Ekosistem digital untuk automasi, sistem website dan penjanaan pendapatan.">
+
+                Digital ecosystem for automation, web systems and monetization.
+
+            </p>
+
+        </div>
+
+
+        <!-- SERVICES LINKS -->
+
+        <div>
+
+            <h4
+                data-en="Services"
+                data-ms="Perkhidmatan">
+
+                Services
+
+            </h4>
+
+            <a href="ManyTerminalChoice.html">
+                Linux Setup
+            </a>
+
+            <br>
+
+            <a href="ShopAffliateSupport.html">
+                Affiliate
+            </a>
+
+            <br>
+
+            <a href="BNPL.html">
+                Finance
+            </a>
+
+        </div>
+
+
+        <!-- SOCIAL MEDIA -->
+
+        <div>
+
+            <h4>Follow</h4>
+
+            <a
+                href="https://www.facebook.com/share/18EmyuMG92/"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                Facebook
+
+            </a>
+
+            <br>
+
+            <a
+                href="https://tiktok.com/@KASUHANET"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                TikTok
+
+            </a>
+
+            <br>
+
+            <a
+                href="http://t.me/KasuhaNETSTOREOfficialBOT"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                Telegram
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        © 2026 Kasuhanet Resources | All Rights Reserved
+
+    </div>
+
+</footer>
+
 </body>
 </html>
